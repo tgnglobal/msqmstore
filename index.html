@@ -162,7 +162,7 @@
     position:relative;
     border-radius:22px;
     overflow:hidden;
-    aspect-ratio:4/5;
+    aspect-ratio:4/3;
     background:linear-gradient(155deg, var(--surface), var(--alt));
     display:flex;align-items:center;justify-content:center;
     border:1px solid var(--line);
@@ -254,7 +254,7 @@
     padding:8px 16px; border-radius:999px;
     display:inline-block; margin-bottom:10px;
   }
-  .bonus-photo{ width:130px; flex-shrink:0; border-radius:12px; overflow:hidden; aspect-ratio:230/440; }
+  .bonus-photo{ width:130px; flex-shrink:0; border-radius:12px; overflow:hidden; aspect-ratio:1/2; }
   .bonus-photo img{ width:100%; height:100%; object-fit:cover; display:block; }
 
   /* Pricing - dark full bleed */
@@ -332,7 +332,7 @@
   @media (min-width:820px){ .g-grid{ grid-template-columns:auto 1fr; } }
   .g-photo{
     width:190px; border-radius:18px; overflow:hidden;
-    flex-shrink:0; aspect-ratio:430/520;
+    flex-shrink:0; aspect-ratio:1/1;
     border:3px solid var(--primary);
   }
   .g-photo img{ width:100%; height:100%; object-fit:cover; display:block; }
@@ -391,7 +391,7 @@
     .hero-sub{ margin-left:auto; margin-right:auto; }
     .hero-cta-row{ justify-content:center; }
     .hero-trust{ justify-content:center; }
-    .hero-image{ max-height:66vh; margin:0 auto; max-width:340px; }
+    .hero-image{ max-height:60vh; margin:0 auto; }
 
     .section-head{ margin-left:auto; margin-right:auto; text-align:center; }
 
@@ -441,7 +441,7 @@
       </div>
     </div>
     <div class="hero-image" data-reveal>
-      <img src="assets/hero-product.png" alt="Man holding the MSQM Premium 4-in-1 Grooming Set" width="430" height="780" loading="eager"
+      <img src="assets/hero-product.png" alt="Man holding the MSQM Premium 4-in-1 Grooming Set" width="900" height="675" loading="eager"
         onerror="this.style.display='none'; this.parentElement.querySelector('.ph-fallback').style.display='flex';">
       <div class="ph-fallback" style="display:none; position:absolute; inset:0; align-items:center; justify-content:center; flex-direction:column;">
         <svg viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg" style="width:52%;opacity:0.9;">
@@ -449,6 +449,7 @@
           <rect x="76" y="30" width="18" height="70" rx="4" fill="#181818"/>
           <rect x="60" y="150" width="60" height="16" rx="6" fill="#F4A300"/>
         </svg>
+        <div class="ph-label">Hero photo goes here, save as assets/hero-product.png</div>
       </div>
     </div>
   </div>
@@ -580,7 +581,7 @@
     </div>
     <div class="bonus-card" data-reveal>
       <div class="bonus-photo">
-        <img src="assets/bonus-cape.png" alt="MSQM professional barber's cape" width="230" height="440" loading="lazy"
+        <img src="assets/bonus-cape.png" alt="MSQM professional barber's cape" width="500" height="1000" loading="lazy"
           onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
         <div style="display:none; width:100%; height:100%; align-items:center; justify-content:center; background:linear-gradient(155deg, var(--surface), var(--alt));">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" style="width:34px;height:34px;color:var(--secondary);"><path d="M4 4c4 2 12 2 16 0M4 4l2 15a2 2 0 0 0 2 1.8h8A2 2 0 0 0 18 19l2-15"/></svg>
@@ -685,7 +686,7 @@
 <section class="guarantee">
   <div class="wrap g-grid">
     <div class="g-photo" data-reveal>
-      <img src="assets/guarantee-check.png" alt="Man testing the MSQM nose and ear trimmer" width="430" height="520" loading="lazy"
+      <img src="assets/guarantee-check.png" alt="Man testing the MSQM nose and ear trimmer" width="700" height="700" loading="lazy"
         onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
       <div style="display:none; width:100%; height:100%; align-items:center; justify-content:center; background:linear-gradient(155deg, var(--surface), var(--alt));">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" style="width:44px;height:44px;color:var(--primary);"><path d="M12 3l7 3v6c0 4.5-3 7.5-7 9-4-1.5-7-4.5-7-9V6l7-3z"/><path d="M9 12l2 2 4-4"/></svg>
