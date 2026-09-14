@@ -1,0 +1,943 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MSQM Premium 4-in-1 Grooming Set | Your Tools, Your Grooming</title>
+<meta name="description" content="Stop sharing clippers at the barbershop. Own the MSQM Premium 4-in-1 Grooming Set: clipper, trimmer, nose and ear trimmer, and foil shaver in one kit. Free nationwide delivery, pay on delivery.">
+<meta property="og:title" content="MSQM Premium 4-in-1 Grooming Set">
+<meta property="og:description" content="Your own personal grooming set. Clipper, trimmer, nose and ear trimmer, and foil shaver in one kit. Free nationwide delivery, pay on delivery.">
+<meta property="og:type" content="website">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 rx=%2220%22 fill=%22%23D62839%22/><text x=%2250%22 y=%2266%22 font-size=%2255%22 font-family=%22sans-serif%22 font-weight=%22700%22 fill=%22white%22 text-anchor=%22middle%22>M</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --base:#FFFFFF;
+    --surface:#F6F3EE;
+    --alt:#EAF4F4;
+    --primary:#D62839;
+    --primary-dark:#B31F2E;
+    --secondary:#F4A300;
+    --ink:#181818;
+    --ink-soft:#4A4A4A;
+    --line:rgba(0,0,0,0.08);
+    --font-head:'Barlow Condensed', sans-serif;
+    --font-body:'Inter', sans-serif;
+    --radius:14px;
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    margin:0;
+    font-family:var(--font-body);
+    color:var(--ink);
+    background:var(--base);
+    line-height:1.55;
+    -webkit-font-smoothing:antialiased;
+  }
+  img{max-width:100%;display:block;}
+  a{color:inherit;}
+  h1,h2,h3,h4{
+    font-family:var(--font-head);
+    font-weight:700;
+    line-height:1.05;
+    margin:0 0 0.5em;
+    letter-spacing:0.2px;
+  }
+  p{margin:0 0 1em;}
+  .wrap{
+    max-width:1120px;
+    margin:0 auto;
+    padding:0 24px;
+  }
+  section{padding:72px 0;}
+  @media (min-width:768px){ section{padding:110px 0;} }
+
+  /* Buttons */
+  .btn{
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    gap:10px;
+    padding:16px 30px;
+    border-radius:999px;
+    font-family:var(--font-body);
+    font-weight:700;
+    font-size:16px;
+    text-decoration:none;
+    border:none;
+    cursor:pointer;
+    transition:transform 0.25s ease, box-shadow 0.25s ease;
+  }
+  .btn-primary{
+    background:var(--primary);
+    color:#fff;
+    box-shadow:0 10px 24px rgba(214,40,57,0.28);
+  }
+  .btn-primary:hover{ transform:translateY(-2px); box-shadow:0 14px 30px rgba(214,40,57,0.35); }
+  .btn-dark{
+    background:var(--ink);
+    color:#fff;
+  }
+  .btn-dark:hover{ transform:translateY(-2px); }
+  .btn-ghost{
+    background:transparent;
+    color:inherit;
+    border:1.5px solid currentColor;
+  }
+
+  /* Header */
+  header{
+    position:sticky; top:0; z-index:50;
+    background:rgba(255,255,255,0.92);
+    backdrop-filter:blur(8px);
+    border-bottom:1px solid var(--line);
+  }
+  .header-row{
+    display:flex; align-items:center; justify-content:space-between;
+    padding:14px 16px;
+    max-width:1120px; margin:0 auto;
+    gap:10px;
+  }
+  .logo{
+    font-family:var(--font-head);
+    font-weight:800;
+    font-size:clamp(17px, 4.8vw, 24px);
+    display:flex; align-items:center; gap:8px;
+    white-space:nowrap;
+  }
+  .logo-mark{
+    width:32px;height:32px;border-radius:9px;
+    background:var(--primary);
+    color:#fff;display:flex;align-items:center;justify-content:center;
+    font-size:18px;
+    flex-shrink:0;
+  }
+  .header-cta{ font-size:clamp(12.5px,3.4vw,14px); padding:10px 16px; white-space:nowrap; flex-shrink:0; }
+  @media (min-width:480px){ .header-row{ padding:16px 24px; } .header-cta{ padding:12px 22px; } }
+
+  /* Hero */
+  .hero{
+    padding:56px 0 72px;
+    background:var(--base);
+  }
+  @media (min-width:768px){ .hero{padding:88px 0 110px;} }
+  .hero-grid{
+    display:grid;
+    gap:40px;
+    align-items:center;
+  }
+  @media (min-width:900px){
+    .hero-grid{ grid-template-columns:1.1fr 0.9fr; gap:56px; }
+  }
+  .eyebrow{
+    display:inline-block;
+    color:var(--primary-dark);
+    background:rgba(214,40,57,0.08);
+    padding:7px 16px;
+    border-radius:999px;
+    font-weight:600;
+    font-size:14px;
+    margin-bottom:20px;
+  }
+  .hero h1{
+    font-size:clamp(2.4rem, 5.5vw, 3.7rem);
+    max-width:14ch;
+  }
+  .hero-sub{
+    font-size:19px;
+    color:var(--ink-soft);
+    max-width:46ch;
+    margin-bottom:30px;
+  }
+  .hero-cta-row{ display:flex; flex-wrap:wrap; gap:14px; margin-bottom:28px; }
+  .hero-trust{
+    display:flex; flex-wrap:wrap; gap:22px;
+    font-size:14px; color:var(--ink-soft); font-weight:600;
+  }
+  .hero-trust span{ display:flex; align-items:center; gap:7px; }
+  .hero-image{
+    position:relative;
+    border-radius:22px;
+    overflow:hidden;
+    aspect-ratio:4/5;
+    background:linear-gradient(155deg, var(--surface), var(--alt));
+    display:flex;align-items:center;justify-content:center;
+    border:1px solid var(--line);
+  }
+  .hero-image img{ width:100%; height:100%; object-fit:cover; display:block; }
+  .hero-image .ph-label{
+    position:absolute; bottom:18px; left:18px; right:18px;
+    background:rgba(24,24,24,0.82);
+    color:#fff; font-size:13px; padding:10px 14px; border-radius:10px;
+  }
+
+  /* Problem / Agitate - dark */
+  .problem{ background:var(--ink); color:#fff; }
+  .problem h2{ color:#fff; font-size:clamp(1.9rem,4vw,2.6rem); max-width:18ch; margin-bottom:44px;}
+  .problem-list{ display:grid; gap:20px; }
+  @media (min-width:768px){ .problem-list{ grid-template-columns:repeat(3,1fr); } }
+  .problem-item{
+    border-top:2px solid var(--primary);
+    padding-top:18px;
+  }
+  .problem-item p{ font-size:18px; color:#E9E9E9; margin:0;}
+
+  /* Section headings */
+  .section-head{ max-width:640px; margin-bottom:48px; }
+  .section-head h2{ font-size:clamp(1.9rem,4vw,2.5rem); }
+  .section-head p{ color:var(--ink-soft); font-size:17px; margin:0; }
+
+  /* Solution grid */
+  .solution{ background:var(--surface); }
+  .feat-grid{
+    display:grid; gap:18px;
+    grid-template-columns:repeat(2,1fr);
+  }
+  @media (min-width:640px){ .feat-grid{ grid-template-columns:repeat(4,1fr);} }
+  .feat-card{
+    background:var(--base);
+    border-radius:var(--radius);
+    padding:26px 20px;
+    border:1px solid var(--line);
+  }
+  .feat-card svg{ width:30px; height:30px; color:var(--primary); margin-bottom:14px; }
+  .feat-card h4{ font-family:var(--font-body); font-weight:700; font-size:16px; margin-bottom:6px; }
+  .feat-card p{ font-size:14px; color:var(--ink-soft); margin:0; }
+
+  /* How it works - timeline */
+  .how{ background:var(--alt); }
+  .timeline{ display:grid; gap:0; counter-reset:step; }
+  .t-step{
+    display:grid; grid-template-columns:56px 1fr; gap:20px;
+    padding:26px 0;
+    border-top:1px solid rgba(0,0,0,0.09);
+  }
+  .t-step:last-child{ border-bottom:1px solid rgba(0,0,0,0.09); }
+  .t-num{
+    width:44px;height:44px;border-radius:50%;
+    background:var(--ink); color:#fff;
+    display:flex;align-items:center;justify-content:center;
+    font-family:var(--font-head); font-weight:700; font-size:19px;
+  }
+  .t-step h4{ font-size:19px; margin-bottom:5px; }
+  .t-step p{ margin:0; color:var(--ink-soft); font-size:15px; }
+
+  /* Comparison */
+  .compare{ background:var(--base); }
+  .compare-table{ display:grid; grid-template-columns:1fr; gap:16px; }
+  @media (min-width:720px){ .compare-table{ grid-template-columns:1fr 1fr; gap:0; border:1px solid var(--line); border-radius:var(--radius); overflow:hidden; } }
+  .compare-col{ padding:32px 28px; }
+  .compare-col.barbershop{ background:var(--surface); }
+  .compare-col.own{ background:var(--ink); color:#fff; }
+  .compare-col h3{ font-size:22px; margin-bottom:20px; }
+  .compare-col.own h3{ color:var(--secondary); }
+  .compare-row{ display:flex; gap:10px; padding:11px 0; border-top:1px solid rgba(0,0,0,0.08); font-size:15px; }
+  .compare-col.own .compare-row{ border-top:1px solid rgba(255,255,255,0.14); }
+  .compare-row:first-of-type{ border-top:none; }
+
+  /* Bonus */
+  .bonus{ background:var(--surface); }
+  .bonus-card{
+    display:grid; gap:26px; align-items:center;
+    background:var(--base);
+    border:1.5px dashed var(--secondary);
+    border-radius:var(--radius);
+    padding:32px;
+  }
+  @media (min-width:720px){ .bonus-card{ grid-template-columns:auto 1fr; } }
+  .bonus-tag{
+    background:var(--secondary); color:var(--ink);
+    font-weight:700; font-size:13px;
+    padding:8px 16px; border-radius:999px;
+    display:inline-block; margin-bottom:10px;
+  }
+  .bonus-photo{ width:130px; flex-shrink:0; border-radius:12px; overflow:hidden; aspect-ratio:230/440; }
+  .bonus-photo img{ width:100%; height:100%; object-fit:cover; display:block; }
+
+  /* Pricing - dark full bleed */
+  .pricing{ background:var(--ink); color:#fff; }
+  .price-card{
+    background:#211f1f;
+    border-radius:20px;
+    padding:44px 30px;
+    max-width:520px;
+    margin:0 auto;
+    text-align:center;
+    border:1px solid rgba(255,255,255,0.1);
+  }
+  .price-card .prod-name{ font-size:15px; color:#C8C8C8; font-weight:600; margin-bottom:6px; }
+  .price-row{ display:flex; align-items:baseline; justify-content:center; gap:12px; margin:14px 0 6px; flex-wrap:wrap;}
+  .price-now{ font-family:var(--font-head); font-size:clamp(2.2rem, 11vw, 3.2rem); font-weight:800; color:var(--secondary); }
+  .price-was{ font-size:20px; color:#8f8f8f; text-decoration:line-through; }
+  .price-note{ font-size:14px; color:#B9B9B9; margin-bottom:26px; }
+  .price-includes{ text-align:left; margin:0 0 28px; padding:0; list-style:none; }
+  .price-includes li{ display:flex; gap:10px; padding:8px 0; font-size:15px; border-top:1px solid rgba(255,255,255,0.08); }
+  .price-includes li:first-child{ border-top:none; }
+  .price-includes svg{ width:18px;height:18px; color:var(--secondary); flex-shrink:0; margin-top:2px; }
+
+  /* Order form */
+  .order{ background:var(--base); }
+  .order-grid{ display:grid; gap:40px; }
+  @media (min-width:900px){ .order-grid{ grid-template-columns:0.85fr 1.15fr; } }
+  .order-info h2{ font-size:clamp(1.8rem,3.6vw,2.3rem); }
+  .order-info p{ color:var(--ink-soft); }
+  .order-info ul{ padding-left:20px; margin:22px 0; color:var(--ink-soft); font-size:15px; }
+  .order-info li{ margin-bottom:8px; }
+  form.order-form{
+    background:var(--surface);
+    border-radius:var(--radius);
+    padding:30px;
+    border:1px solid var(--line);
+  }
+  .form-row{ display:grid; gap:16px; }
+  @media (min-width:560px){ .form-row.two{ grid-template-columns:1fr 1fr; } }
+  .field{ margin-bottom:16px; }
+  .field label{ display:block; font-size:13px; font-weight:600; margin-bottom:6px; color:var(--ink-soft); }
+  .field input{
+    width:100%; padding:13px 14px;
+    border:1.5px solid var(--line);
+    border-radius:10px;
+    font-family:var(--font-body);
+    font-size:15px;
+    background:#fff;
+  }
+  .field input:focus, .field select:focus{ outline:2px solid var(--primary); outline-offset:1px; border-color:var(--primary); }
+  .field select{
+    width:100%; padding:13px 14px;
+    border:1.5px solid var(--line);
+    border-radius:10px;
+    font-family:var(--font-body);
+    font-size:15px;
+    background:#fff;
+    appearance:none;
+    -webkit-appearance:none;
+    background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='9'%3E%3Cpath d='M1 1l6 6 6-6' stroke='%234A4A4A' stroke-width='1.6' fill='none' fill-rule='evenodd'/%3E%3C/svg%3E");
+    background-repeat:no-repeat;
+    background-position:right 14px center;
+  }
+  .phone-with-code{ display:grid; grid-template-columns:118px 1fr; gap:8px; }
+  .phone-with-code select{ padding-left:10px; padding-right:26px; font-size:14px; }
+  .field-error{ font-size:12.5px; color:var(--primary); margin-top:5px; display:none; }
+  .field.has-error input, .field.has-error select{ border-color:var(--primary); }
+  .field.has-error .field-error{ display:block; }
+  .order-form .btn{ width:100%; margin-top:6px; padding:17px; font-size:16px; }
+  .form-note{ font-size:13px; color:var(--ink-soft); margin-top:14px; text-align:center; }
+
+  /* Guarantee */
+  .guarantee{ background:var(--alt); }
+  .g-grid{ display:grid; gap:36px; align-items:center; }
+  @media (min-width:820px){ .g-grid{ grid-template-columns:auto 1fr; } }
+  .g-photo{
+    width:190px; border-radius:18px; overflow:hidden;
+    flex-shrink:0; aspect-ratio:430/520;
+    border:3px solid var(--primary);
+  }
+  .g-photo img{ width:100%; height:100%; object-fit:cover; display:block; }
+  .g-text h2{ font-size:clamp(1.7rem,3.4vw,2.2rem); margin-bottom:12px; }
+  .g-points{ display:grid; gap:10px; margin-top:16px; }
+  @media (min-width:600px){ .g-points{ grid-template-columns:1fr 1fr; } }
+  .g-point{ display:flex; gap:10px; font-size:15px; }
+  .g-point svg{ width:19px;height:19px; color:var(--primary); flex-shrink:0; margin-top:2px; }
+
+  /* FAQ */
+  .faq{ background:var(--surface); }
+  .faq-item{ border-top:1px solid var(--line); }
+  .faq-item:last-child{ border-bottom:1px solid var(--line); }
+  .faq-q{
+    width:100%; text-align:left; background:none; border:none;
+    padding:22px 4px; display:flex; justify-content:space-between; align-items:center; gap:16px;
+    font-family:var(--font-body); font-weight:600; font-size:16px; cursor:pointer; color:var(--ink);
+  }
+  .faq-q .plus{ font-size:22px; color:var(--primary); flex-shrink:0; transition:transform 0.25s ease; }
+  .faq-item.open .plus{ transform:rotate(45deg); }
+  .faq-a{ max-height:0; overflow:hidden; transition:max-height 0.3s ease; }
+  .faq-a p{ padding:0 4px 22px; color:var(--ink-soft); font-size:15px; margin:0; }
+
+  /* Support */
+  .support{ background:var(--base); text-align:center; }
+  .support h2{ font-size:clamp(1.8rem,3.6vw,2.3rem); }
+  .support p{ color:var(--ink-soft); max-width:46ch; margin-left:auto; margin-right:auto; }
+  .support-links{ display:flex; flex-wrap:wrap; justify-content:center; gap:16px; margin-top:26px; }
+  .support-link{
+    display:flex; align-items:center; gap:10px;
+    border:1.5px solid var(--line);
+    padding:14px 22px; border-radius:999px;
+    font-weight:600; font-size:15px; text-decoration:none; color:var(--ink);
+  }
+  .support-link svg{ width:20px;height:20px; color:var(--primary); }
+
+  /* Footer */
+  footer{ background:var(--ink); color:#fff; padding:56px 0 30px; }
+  .footer-cta{ text-align:center; margin-bottom:46px; }
+  .footer-cta h2{ color:#fff; font-size:clamp(1.8rem,3.6vw,2.4rem); max-width:16ch; margin:0 auto 22px; }
+  .footer-bottom{
+    display:flex; flex-wrap:wrap; gap:16px; justify-content:space-between; align-items:center;
+    border-top:1px solid rgba(255,255,255,0.12); padding-top:26px; font-size:13px; color:#9c9c9c;
+  }
+  @media (max-width:640px){
+    .footer-bottom{ flex-direction:column; justify-content:center; text-align:center; gap:8px; }
+  }
+
+  [data-reveal]{ opacity:0; transform:translateY(16px); transition:opacity 0.6s ease, transform 0.6s ease; }
+  [data-reveal].in{ opacity:1; transform:none; }
+
+  /* Mobile responsive centering and fit */
+  @media (max-width:719px){
+    .hero-grid > div:first-child{ text-align:center; }
+    .hero h1{ max-width:none; }
+    .hero-sub{ margin-left:auto; margin-right:auto; }
+    .hero-cta-row{ justify-content:center; }
+    .hero-trust{ justify-content:center; }
+    .hero-image{ max-height:66vh; margin:0 auto; max-width:340px; }
+
+    .section-head{ margin-left:auto; margin-right:auto; text-align:center; }
+
+    .bonus-card{ text-align:center; justify-items:center; }
+    .bonus-photo{ margin:0 auto; }
+
+    .g-text{ text-align:center; }
+    .g-photo{ margin:0 auto; }
+    .g-points{ text-align:left; max-width:340px; margin-left:auto; margin-right:auto; }
+
+    .order-info{ text-align:center; }
+    .order-info ul{ text-align:left; max-width:360px; margin-left:auto; margin-right:auto; }
+
+    .support{ text-align:center; }
+  }
+
+  /* Prevent any element from forcing horizontal scroll on narrow phones */
+  @media (max-width:400px){
+    .wrap{ padding:0 16px; }
+    .hero h1{ font-size:clamp(2rem, 8vw, 2.6rem); }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="header-row">
+    <div class="logo"><span class="logo-mark">M</span>MSQM STORE</div>
+    <a href="#order" class="btn btn-primary header-cta">Order Now</a>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="wrap hero-grid">
+    <div data-reveal>
+      <span class="eyebrow">Your Own Grooming Set</span>
+      <h1>Your Barber's Clippers Touched How Many Heads Today?</h1>
+      <p class="hero-sub">Own the MSQM Premium 4-in-1 Grooming Set. Groom at home, take it to your barber, or pack it for a trip. One kit, zero sharing.</p>
+      <div class="hero-cta-row">
+        <a href="#pricing" class="btn btn-primary">See The Full Set &amp; Price</a>
+        <a href="#how" class="btn btn-ghost">How It Works</a>
+      </div>
+      <div class="hero-trust">
+        <span>Free nationwide delivery</span>
+        <span>Pay on delivery</span>
+        <span>1-year warranty</span>
+      </div>
+    </div>
+    <div class="hero-image" data-reveal>
+      <img src="assets/hero-product.jpg" alt="Man holding the MSQM Premium 4-in-1 Grooming Set" width="430" height="780" loading="eager"
+        onerror="this.style.display='none'; this.parentElement.querySelector('.ph-fallback').style.display='flex';">
+      <div class="ph-fallback" style="display:none; position:absolute; inset:0; align-items:center; justify-content:center; flex-direction:column;">
+        <svg viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg" style="width:52%;opacity:0.9;">
+          <rect x="70" y="20" width="30" height="140" rx="10" fill="#D62839"/>
+          <rect x="76" y="30" width="18" height="70" rx="4" fill="#181818"/>
+          <rect x="60" y="150" width="60" height="16" rx="6" fill="#F4A300"/>
+        </svg>
+        <div class="ph-label">Hero photo goes here, save as assets/hero-product.jpg</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="problem">
+  <div class="wrap">
+    <h2 data-reveal>Sharing tools at the barbershop is a habit nobody questions, until something goes wrong</h2>
+    <div class="problem-list">
+      <div class="problem-item" data-reveal>
+        <p>Shared clippers and blades pass through hands, and heads, you know nothing about.</p>
+      </div>
+      <div class="problem-item" data-reveal>
+        <p>A skin infection or irritation can cost far more than a grooming kit ever would.</p>
+      </div>
+      <div class="problem-item" data-reveal>
+        <p>You still queue, still pay per visit, and still wait for your turn every single time.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="solution" id="features">
+  <div class="wrap">
+    <div class="section-head" data-reveal>
+      <h2>Everything you need, in one kit</h2>
+      <p>Four tools built into one set, so you can handle your hair, beard, and finishing touches without borrowing anything from anyone.</p>
+    </div>
+    <div class="feat-grid">
+      <div class="feat-card" data-reveal>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="6" y="3" width="12" height="15" rx="2"/><path d="M9 21h6"/></svg>
+        <h4>Hair Clipper</h4>
+        <p>Clean, even cuts, every time you use it.</p>
+      </div>
+      <div class="feat-card" data-reveal>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 12h16M8 6l-4 6 4 6M16 6l4 6-4 6"/></svg>
+        <h4>T-Blade Trimmer</h4>
+        <p>Sharp outlines and clean edges around the hairline.</p>
+      </div>
+      <div class="feat-card" data-reveal>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="8"/><path d="M9 12h6"/></svg>
+        <h4>Nose &amp; Ear Trimmer</h4>
+        <p>Handles the small details most barbers rush through.</p>
+      </div>
+      <div class="feat-card" data-reveal>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="5" y="7" width="14" height="10" rx="3"/><path d="M9 7V5h6v2"/></svg>
+        <h4>Foil Shaver</h4>
+        <p>A close, smooth finish without a shared blade.</p>
+      </div>
+      <div class="feat-card" data-reveal>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M13 2 4 14h6l-1 8 9-12h-6l1-8z"/></svg>
+        <h4>USB Fast Charging</h4>
+        <p>Charge from a power bank, laptop, or wall adapter.</p>
+      </div>
+      <div class="feat-card" data-reveal>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="8" width="16" height="8" rx="2"/><path d="M19 10v4"/></svg>
+        <h4>Rechargeable Battery</h4>
+        <p>Charge ahead of time and groom even when there's no light.</p>
+      </div>
+      <div class="feat-card" data-reveal>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="4" y="5" width="16" height="14" rx="2"/><path d="M8 9h8M8 13h5"/></svg>
+        <h4>LED Digital Display</h4>
+        <p>See your battery level and settings at a glance.</p>
+      </div>
+      <div class="feat-card" data-reveal>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="4" y="6" width="16" height="13" rx="2"/><path d="M9 6V4h6v2"/></svg>
+        <h4>Premium Travel Case</h4>
+        <p>Pack the full set for home, the barber, or a trip.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="how" id="how">
+  <div class="wrap">
+    <div class="section-head" data-reveal>
+      <h2>How it works</h2>
+      <p>From order to your doorstep, nationwide.</p>
+    </div>
+    <div class="timeline">
+      <div class="t-step" data-reveal>
+        <div class="t-num">1</div>
+        <div><h4>Fill the order form</h4><p>Give us your name, phone number, and delivery address below.</p></div>
+      </div>
+      <div class="t-step" data-reveal>
+        <div class="t-num">2</div>
+        <div><h4>We confirm your order</h4><p>Our team calls or messages you on WhatsApp to confirm your details.</p></div>
+      </div>
+      <div class="t-step" data-reveal>
+        <div class="t-num">3</div>
+        <div><h4>Your set arrives</h4><p>We deliver nationwide, straight to your address.</p></div>
+      </div>
+      <div class="t-step" data-reveal>
+        <div class="t-num">4</div>
+        <div><h4>Pay on delivery</h4><p>Check the set, then pay the delivery agent once it's in your hands.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="compare">
+  <div class="wrap">
+    <div class="section-head" data-reveal>
+      <h2>The barbershop routine vs. owning your set</h2>
+    </div>
+    <div class="compare-table" data-reveal>
+      <div class="compare-col barbershop">
+        <h3>Sharing tools at the barbershop</h3>
+        <div class="compare-row">Tools used on many different people</div>
+        <div class="compare-row">You pay something every single visit</div>
+        <div class="compare-row">Fixed shop hours and waiting your turn</div>
+        <div class="compare-row">Tools stay with the barber, not with you</div>
+      </div>
+      <div class="compare-col own">
+        <h3>Owning your MSQM set</h3>
+        <div class="compare-row">Tools that are yours alone</div>
+        <div class="compare-row">One payment, use it for years</div>
+        <div class="compare-row">Groom anytime, at home or on the road</div>
+        <div class="compare-row">Take it to your barber if you still want their hand</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="bonus">
+  <div class="wrap">
+    <div class="section-head" data-reveal>
+      <h2>What you get free with your order</h2>
+    </div>
+    <div class="bonus-card" data-reveal>
+      <div class="bonus-photo">
+        <img src="assets/bonus-cape.jpg" alt="MSQM professional barber's cape" width="230" height="440" loading="lazy"
+          onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+        <div style="display:none; width:100%; height:100%; align-items:center; justify-content:center; background:linear-gradient(155deg, var(--surface), var(--alt));">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" style="width:34px;height:34px;color:var(--secondary);"><path d="M4 4c4 2 12 2 16 0M4 4l2 15a2 2 0 0 0 2 1.8h8A2 2 0 0 0 18 19l2-15"/></svg>
+        </div>
+      </div>
+      <div>
+        <span class="bonus-tag">Free Gift</span>
+        <h3 style="font-family:var(--font-body);font-size:19px;margin-bottom:6px;">Professional Barber's Cape</h3>
+        <p style="margin:0;color:var(--ink-soft);">Keep your clothes clean while you cut, trim, or shave, whether you're grooming at home or taking the set to your barber.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="pricing" id="pricing">
+  <div class="wrap">
+    <div class="section-head" data-reveal>
+      <h2 style="color:#fff;">One set. One price. No hidden extras.</h2>
+      <p style="color:#C8C8C8;">Everything you need to stop sharing tools, in a single box.</p>
+    </div>
+    <div class="price-card" data-reveal>
+      <div class="prod-name">MSQM PREMIUM 4-IN-1 GROOMING SET</div>
+      <div class="price-row">
+        <span class="price-now">&#8358;120,000</span>
+        <span class="price-was">&#8358;150,000</span>
+      </div>
+      <p class="price-note">Pay on delivery. Free nationwide shipping.</p>
+      <ul class="price-includes">
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12l4 4 10-10"/></svg> Hair clipper, T-blade trimmer, nose &amp; ear trimmer, foil shaver</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12l4 4 10-10"/></svg> USB charging cable and guide combs</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12l4 4 10-10"/></svg> Premium travel case</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12l4 4 10-10"/></svg> Free professional barber's cape</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12l4 4 10-10"/></svg> 1-year warranty</li>
+      </ul>
+      <a href="#order" class="btn btn-primary" style="width:100%;">Order Now</a>
+    </div>
+  </div>
+</section>
+
+<section class="order" id="order">
+  <div class="wrap order-grid">
+    <div class="order-info" data-reveal>
+      <h2>Place your order</h2>
+      <p>Fill the form and we will reach out on WhatsApp to confirm your order and delivery address.</p>
+      <ul>
+        <li>No payment needed now, pay when it's delivered.</li>
+        <li>Free delivery, anywhere in Nigeria.</li>
+        <li>Be ready to receive your order within 24 hours of confirming, or arrange for someone else to receive it on your behalf.</li>
+      </ul>
+    </div>
+    <form class="order-form" id="orderForm" data-reveal novalidate>
+      <div class="form-row two">
+        <div class="field">
+          <label for="firstName">First Name</label>
+          <input type="text" id="firstName" placeholder="e.g. Chinedu" required>
+          <div class="field-error">Please enter your first name.</div>
+        </div>
+        <div class="field">
+          <label for="lastName">Last Name</label>
+          <input type="text" id="lastName" placeholder="e.g. Okafor" required>
+          <div class="field-error">Please enter your last name.</div>
+        </div>
+      </div>
+      <div class="field">
+        <label for="phone">Phone Number</label>
+        <input type="tel" id="phone" placeholder="e.g. 08012345678" required>
+        <div class="field-error">Enter a valid Nigerian phone number, e.g. 08012345678.</div>
+      </div>
+      <div class="field">
+        <label for="waNumber">WhatsApp Number</label>
+        <div class="phone-with-code">
+          <select id="waCode" required></select>
+          <input type="tel" id="waNumber" placeholder="Number without the leading 0" required>
+        </div>
+        <div class="field-error" id="waError">Enter a valid WhatsApp number for the selected country.</div>
+      </div>
+      <div class="field">
+        <label for="address">Complete Address</label>
+        <input type="text" id="address" placeholder="House number, street, landmark" required>
+        <div class="field-error">Please enter your complete address.</div>
+      </div>
+      <div class="form-row two">
+        <div class="field">
+          <label for="city">City / Town</label>
+          <input type="text" id="city" placeholder="e.g. Ikeja" required>
+          <div class="field-error">Please enter your city or town.</div>
+        </div>
+        <div class="field">
+          <label for="state">State</label>
+          <select id="state" required>
+            <option value="" disabled selected>Select your state</option>
+          </select>
+          <div class="field-error">Please select your state.</div>
+        </div>
+      </div>
+      <button type="submit" class="btn btn-primary">Continue to Confirm Order</button>
+      <p class="form-note">Next, you'll see your order summary and a button to confirm and send it to us on WhatsApp.</p>
+    </form>
+  </div>
+</section>
+
+<section class="guarantee">
+  <div class="wrap g-grid">
+    <div class="g-photo" data-reveal>
+      <img src="assets/guarantee-check.jpg" alt="Man testing the MSQM nose and ear trimmer" width="430" height="520" loading="lazy"
+        onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+      <div style="display:none; width:100%; height:100%; align-items:center; justify-content:center; background:linear-gradient(155deg, var(--surface), var(--alt));">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" style="width:44px;height:44px;color:var(--primary);"><path d="M12 3l7 3v6c0 4.5-3 7.5-7 9-4-1.5-7-4.5-7-9V6l7-3z"/><path d="M9 12l2 2 4-4"/></svg>
+      </div>
+    </div>
+    <div class="g-text" data-reveal>
+      <h2>Backed by a money-back guarantee</h2>
+      <p>If your set is not exactly as advertised, tell us within 24 hours of testing and confirming your delivery, and we'll make it right.</p>
+      <div class="g-points">
+        <div class="g-point"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12l4 4 10-10"/></svg> Money-back if it's not as advertised</div>
+        <div class="g-point"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12l4 4 10-10"/></svg> 24 hours to test and confirm</div>
+        <div class="g-point"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12l4 4 10-10"/></svg> 1-year warranty on the set</div>
+        <div class="g-point"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12l4 4 10-10"/></svg> Pay on delivery, no risk upfront</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="faq">
+  <div class="wrap">
+    <div class="section-head" data-reveal>
+      <h2>Questions people ask us</h2>
+    </div>
+    <div id="faqList" data-reveal>
+      <div class="faq-item">
+        <button class="faq-q">Do I pay before or after delivery?<span class="plus">+</span></button>
+        <div class="faq-a"><p>After. You pay the delivery agent once your MSQM set is in your hands.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">What's included in the box?<span class="plus">+</span></button>
+        <div class="faq-a"><p>The hair clipper, T-blade trimmer, nose and ear trimmer, foil shaver, USB charging cable, guide combs, a premium travel case, and a free barber's cape.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">Does it still work if there's no light?<span class="plus">+</span></button>
+        <div class="faq-a"><p>Yes. It runs on a rechargeable battery, so charge it ahead of time with a power bank or wall adapter and use it even during a power outage.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">Can my barber use this instead of their own tools?<span class="plus">+</span></button>
+        <div class="faq-a"><p>Yes, you can take the set with you to your barber so they groom you with your own personal tools instead of shared ones.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">Is there a warranty?<span class="plus">+</span></button>
+        <div class="faq-a"><p>Yes, every MSQM set comes with a 1-year warranty, plus a money-back guarantee if it's not exactly as advertised.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">How long does delivery take?<span class="plus">+</span></button>
+        <div class="faq-a"><p>We deliver nationwide. Once your order is confirmed, be ready to receive it, or arrange for someone else to receive it on your behalf.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="support">
+  <div class="wrap">
+    <h2>Still have a question?</h2>
+    <p>Reach us directly on WhatsApp or by phone, we're happy to help before you order.</p>
+    <div class="support-links">
+      <a class="support-link" href="https://wa.me/2349134601088" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M21 11.5a8.5 8.5 0 0 1-12.5 7.5L3 20l1-5.5A8.5 8.5 0 1 1 21 11.5z"/></svg>
+        WhatsApp: 0913 460 1088
+      </a>
+      <a class="support-link" href="tel:+2348064926866">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.3 1.8.6 2.7a2 2 0 0 1-.4 2.1L8.1 9.7a16 16 0 0 0 6 6l1.2-1.2a2 2 0 0 1 2.1-.4c.9.3 1.8.5 2.7.6a2 2 0 0 1 1.9 2.2z"/></svg>
+        Call: 0806 492 6866
+      </a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="footer-cta">
+      <h2>Stop sharing. Start owning your grooming.</h2>
+      <a href="#order" class="btn btn-primary">Order Your MSQM Set Now</a>
+    </div>
+    <div class="footer-bottom">
+      <div>&copy; 2026 MSQM STORE. All rights reserved.</div>
+      <div>WhatsApp: 0913 460 1088 &nbsp;|&nbsp; Call: 0806 492 6866</div>
+    </div>
+  </div>
+</footer>
+
+<script>
+  // Reveal on scroll
+  const revealEls = document.querySelectorAll('[data-reveal]');
+  const io = new IntersectionObserver((entries)=>{
+    entries.forEach(e=>{
+      if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); }
+    });
+  },{threshold:0.12});
+  revealEls.forEach(el=>io.observe(el));
+
+  // FAQ accordion
+  document.querySelectorAll('.faq-item').forEach(item=>{
+    const btn = item.querySelector('.faq-q');
+    const ans = item.querySelector('.faq-a');
+    btn.addEventListener('click', ()=>{
+      const isOpen = item.classList.contains('open');
+      document.querySelectorAll('.faq-item.open').forEach(o=>{
+        o.classList.remove('open');
+        o.querySelector('.faq-a').style.maxHeight = null;
+      });
+      if(!isOpen){
+        item.classList.add('open');
+        ans.style.maxHeight = ans.scrollHeight + 'px';
+      }
+    });
+  });
+
+  // Nigerian states, verified: 36 states plus the FCT
+  const nigerianStates = [
+    "Federal Capital Territory (Abuja)","Abia","Adamawa","Akwa Ibom","Anambra","Bauchi",
+    "Bayelsa","Benue","Borno","Cross River","Delta","Ebonyi","Edo","Ekiti","Enugu","Gombe",
+    "Imo","Jigawa","Kaduna","Kano","Katsina","Kebbi","Kogi","Kwara","Lagos","Nasarawa","Niger",
+    "Ogun","Ondo","Osun","Oyo","Plateau","Rivers","Sokoto","Taraba","Yobe","Zamfara"
+  ];
+  const stateSelect = document.getElementById('state');
+  nigerianStates.forEach(s=>{
+    const opt = document.createElement('option');
+    opt.value = s; opt.textContent = s;
+    stateSelect.appendChild(opt);
+  });
+
+  // Country calling codes for the WhatsApp field, Nigeria first as default.
+  // pattern checks the national number (no leading 0, no country code) entered by the buyer.
+  const countryCodes = [
+    {name:"Nigeria", iso:"NG", dial:"234", pattern:/^[789]\d{9}$/, hint:"10 digits, starting 7, 8 or 9"},
+    {name:"Ghana", iso:"GH", dial:"233", pattern:/^\d{9}$/, hint:"9 digits"},
+    {name:"Kenya", iso:"KE", dial:"254", pattern:/^\d{9}$/, hint:"9 digits"},
+    {name:"South Africa", iso:"ZA", dial:"27", pattern:/^\d{9}$/, hint:"9 digits"},
+    {name:"Cameroon", iso:"CM", dial:"237", pattern:/^\d{9}$/, hint:"9 digits"},
+    {name:"Cote d'Ivoire", iso:"CI", dial:"225", pattern:/^\d{10}$/, hint:"10 digits"},
+    {name:"Senegal", iso:"SN", dial:"221", pattern:/^\d{9}$/, hint:"9 digits"},
+    {name:"Togo", iso:"TG", dial:"228", pattern:/^\d{8}$/, hint:"8 digits"},
+    {name:"Benin Republic", iso:"BJ", dial:"229", pattern:/^\d{8}$/, hint:"8 digits"},
+    {name:"Uganda", iso:"UG", dial:"256", pattern:/^\d{9}$/, hint:"9 digits"},
+    {name:"Tanzania", iso:"TZ", dial:"255", pattern:/^\d{9}$/, hint:"9 digits"},
+    {name:"Rwanda", iso:"RW", dial:"250", pattern:/^\d{9}$/, hint:"9 digits"},
+    {name:"Ethiopia", iso:"ET", dial:"251", pattern:/^\d{9}$/, hint:"9 digits"},
+    {name:"Zambia", iso:"ZM", dial:"260", pattern:/^\d{9}$/, hint:"9 digits"},
+    {name:"Zimbabwe", iso:"ZW", dial:"263", pattern:/^\d{9}$/, hint:"9 digits"},
+    {name:"Morocco", iso:"MA", dial:"212", pattern:/^\d{9}$/, hint:"9 digits"},
+    {name:"Algeria", iso:"DZ", dial:"213", pattern:/^\d{9}$/, hint:"9 digits"},
+    {name:"Tunisia", iso:"TN", dial:"216", pattern:/^\d{8}$/, hint:"8 digits"},
+    {name:"Sierra Leone", iso:"SL", dial:"232", pattern:/^\d{8}$/, hint:"8 digits"},
+    {name:"Liberia", iso:"LR", dial:"231", pattern:/^\d{7,9}$/, hint:"7 to 9 digits"},
+    {name:"Gambia", iso:"GM", dial:"220", pattern:/^\d{7}$/, hint:"7 digits"},
+    {name:"Mali", iso:"ML", dial:"223", pattern:/^\d{8}$/, hint:"8 digits"},
+    {name:"Niger Republic", iso:"NE", dial:"227", pattern:/^\d{8}$/, hint:"8 digits"},
+    {name:"Burkina Faso", iso:"BF", dial:"226", pattern:/^\d{8}$/, hint:"8 digits"},
+    {name:"Guinea", iso:"GN", dial:"224", pattern:/^\d{8,9}$/, hint:"8 to 9 digits"},
+    {name:"Chad", iso:"TD", dial:"235", pattern:/^\d{8}$/, hint:"8 digits"},
+    {name:"Angola", iso:"AO", dial:"244", pattern:/^\d{9}$/, hint:"9 digits"},
+    {name:"Mozambique", iso:"MZ", dial:"258", pattern:/^\d{9}$/, hint:"9 digits"},
+    {name:"Botswana", iso:"BW", dial:"267", pattern:/^\d{8}$/, hint:"8 digits"},
+    {name:"Namibia", iso:"NA", dial:"264", pattern:/^\d{9}$/, hint:"9 digits"},
+    {name:"Sudan", iso:"SD", dial:"249", pattern:/^\d{9}$/, hint:"9 digits"},
+    {name:"South Sudan", iso:"SS", dial:"211", pattern:/^\d{9}$/, hint:"9 digits"},
+    {name:"Egypt", iso:"EG", dial:"20", pattern:/^\d{10}$/, hint:"10 digits"},
+    {name:"United Arab Emirates", iso:"AE", dial:"971", pattern:/^\d{9}$/, hint:"9 digits"},
+    {name:"Saudi Arabia", iso:"SA", dial:"966", pattern:/^\d{9}$/, hint:"9 digits"},
+    {name:"Qatar", iso:"QA", dial:"974", pattern:/^\d{8}$/, hint:"8 digits"},
+    {name:"United Kingdom", iso:"GB", dial:"44", pattern:/^\d{10}$/, hint:"10 digits"},
+    {name:"United States / Canada", iso:"US", dial:"1", pattern:/^\d{10}$/, hint:"10 digits"},
+    {name:"India", iso:"IN", dial:"91", pattern:/^\d{10}$/, hint:"10 digits"},
+    {name:"China", iso:"CN", dial:"86", pattern:/^\d{11}$/, hint:"11 digits"},
+    {name:"Germany", iso:"DE", dial:"49", pattern:/^\d{6,11}$/, hint:"6 to 11 digits"},
+    {name:"France", iso:"FR", dial:"33", pattern:/^\d{9}$/, hint:"9 digits"},
+    {name:"Italy", iso:"IT", dial:"39", pattern:/^\d{9,10}$/, hint:"9 to 10 digits"},
+    {name:"Spain", iso:"ES", dial:"34", pattern:/^\d{9}$/, hint:"9 digits"},
+    {name:"Netherlands", iso:"NL", dial:"31", pattern:/^\d{9}$/, hint:"9 digits"},
+    {name:"Ireland", iso:"IE", dial:"353", pattern:/^\d{9}$/, hint:"9 digits"},
+    {name:"Turkey", iso:"TR", dial:"90", pattern:/^\d{10}$/, hint:"10 digits"},
+    {name:"Brazil", iso:"BR", dial:"55", pattern:/^\d{10,11}$/, hint:"10 to 11 digits"},
+    {name:"Australia", iso:"AU", dial:"61", pattern:/^\d{9}$/, hint:"9 digits"}
+  ];
+  function flagEmoji(iso2){
+    return iso2.toUpperCase().replace(/./g, c => String.fromCodePoint(127397 + c.charCodeAt(0)));
+  }
+  const waCodeSelect = document.getElementById('waCode');
+  countryCodes.forEach((c,i)=>{
+    const opt = document.createElement('option');
+    opt.value = c.dial;
+    opt.textContent = flagEmoji(c.iso) + " +" + c.dial;
+    if(i===0) opt.selected = true;
+    waCodeSelect.appendChild(opt);
+  });
+  function updateWaHint(){
+    const c = countryCodes.find(c=>c.dial===waCodeSelect.value);
+    document.getElementById('waError').textContent = "Enter a valid number for +" + c.dial + " (" + c.hint + "), no leading 0.";
+  }
+  waCodeSelect.addEventListener('change', updateWaHint);
+  updateWaHint();
+
+  // Nigerian phone field pattern (delivery contact number)
+  const ngPhonePattern = /^0[789]\d{9}$/;
+
+  function setFieldError(fieldEl, hasError){
+    fieldEl.classList.toggle('has-error', hasError);
+  }
+
+  // Order form -> validate -> pass details to thank-you page
+  document.getElementById('orderForm').addEventListener('submit', function(e){
+    e.preventDefault();
+    let valid = true;
+
+    const firstNameEl = document.getElementById('firstName');
+    const lastNameEl = document.getElementById('lastName');
+    const phoneEl = document.getElementById('phone');
+    const waNumberEl = document.getElementById('waNumber');
+    const addressEl = document.getElementById('address');
+    const cityEl = document.getElementById('city');
+    const stateEl = document.getElementById('state');
+
+    const firstName = firstNameEl.value.trim();
+    const lastName = lastNameEl.value.trim();
+    const phone = phoneEl.value.trim().replace(/\s+/g,'');
+    const waNumberRaw = waNumberEl.value.trim().replace(/\s+/g,'').replace(/^0+/,'');
+    const address = addressEl.value.trim();
+    const city = cityEl.value.trim();
+    const state = stateEl.value;
+    const waDial = waCodeSelect.value;
+    const waCountry = countryCodes.find(c=>c.dial===waDial);
+
+    setFieldError(firstNameEl.closest('.field'), !firstName); if(!firstName) valid=false;
+    setFieldError(lastNameEl.closest('.field'), !lastName); if(!lastName) valid=false;
+
+    const phoneOk = ngPhonePattern.test(phone);
+    setFieldError(phoneEl.closest('.field'), !phoneOk); if(!phoneOk) valid=false;
+
+    const waOk = waCountry.pattern.test(waNumberRaw);
+    setFieldError(waNumberEl.closest('.field'), !waOk); if(!waOk) valid=false;
+
+    setFieldError(addressEl.closest('.field'), !address); if(!address) valid=false;
+    setFieldError(cityEl.closest('.field'), !city); if(!city) valid=false;
+    setFieldError(stateEl.closest('.field'), !state); if(!state) valid=false;
+
+    if(!valid){
+      const firstBad = document.querySelector('.order-form .has-error');
+      if(firstBad) firstBad.scrollIntoView({behavior:'smooth', block:'center'});
+      return;
+    }
+
+    const params = new URLSearchParams({
+      firstName, lastName, phone,
+      waDial, waNumber: waNumberRaw,
+      address, city, state
+    });
+    window.location.href = 'thank-you.html?' + params.toString();
+  });
+</script>
+
+</body>
+</html>
