@@ -5,7 +5,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Order Received | MSQM Store</title>
 <meta name="description" content="Your MSQM Premium 4-in-1 Grooming Set order is almost complete. Confirm on WhatsApp to get it delivered within 24 hours.">
-<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 rx=%2220%22 fill=%22%23D62839%22/><text x=%2250%22 y=%2266%22 font-size=%2255%22 font-family=%22sans-serif%22 font-weight=%22700%22 fill=%22white%22 text-anchor=%22middle%22>M</text></svg>">
+<link rel="icon" type="image/png" href="assets/favicon.png">
+<link rel="apple-touch-icon" href="assets/favicon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -59,7 +60,7 @@
 <body>
   <div class="card" id="card">
     <div class="product-photo">
-      <img src="assets/product-thankyou.png" alt="MSQM Premium 4-in-1 Grooming Set" loading="eager" width="900" height="675"
+      <img src="assets/product-thankyou.jpg" alt="MSQM Premium 4-in-1 Grooming Set" loading="eager" width="900" height="675"
         onerror="this.style.display='none'; this.parentElement.querySelector('.ph-fallback').style.display='flex';">
       <div class="ph-fallback" style="display:none; position:absolute; inset:0; align-items:center; justify-content:center; flex-direction:column;">
         <svg viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -67,16 +68,16 @@
           <rect x="76" y="30" width="18" height="70" rx="4" fill="#181818"/>
           <rect x="60" y="150" width="60" height="16" rx="6" fill="#F4A300"/>
         </svg>
-        <div class="ph-note">Real product photo goes here, save it as assets/product-thankyou.png</div>
+        <div class="ph-note">Real product photo goes here, save it as assets/product-thankyou.jpg</div>
       </div>
     </div>
 
     <div class="card-body">
       <h1 id="heading">Your order is on the way</h1>
-      <p id="introText">Click the button below to confirm your order on WhatsApp, and we'll get your MSQM Premium 4-in-1 Grooming Set to you within 24 hours.</p>
+      <p id="introText">Click the button below to confirm your order, and we'll deliver your MSQM Premium 4-in-1 Grooming Set to you within 24 hours.</p>
 
       <div class="btns">
-        <a class="btn btn-primary" id="confirmBtn" href="https://wa.me/2349134601088" target="_blank" rel="noopener">Confirm Order on WhatsApp</a>
+        <a class="btn btn-primary" id="confirmBtn" href="https://wa.me/2349134601088" target="_blank" rel="noopener">Confirm Your Order</a>
       </div>
     </div>
   </div>
@@ -101,7 +102,7 @@
 
       document.getElementById('confirmBtn').href = "https://wa.me/2349134601088?text=" + message;
     } else {
-      document.getElementById('introText').textContent = "Click the button below to send us your order on WhatsApp, and we'll get your MSQM Premium 4-in-1 Grooming Set to you within 24 hours.";
+      document.getElementById('introText').textContent = "Click the button below to confirm your order, and we'll deliver your MSQM Premium 4-in-1 Grooming Set to you within 24 hours.";
     }
   </script>
 </body>

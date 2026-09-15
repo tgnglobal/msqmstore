@@ -8,7 +8,13 @@
 <meta property="og:title" content="MSQM Premium 4-in-1 Grooming Set">
 <meta property="og:description" content="Your own personal grooming set. Clipper, trimmer, nose and ear trimmer, and foil shaver in one kit. Free nationwide delivery, pay on delivery.">
 <meta property="og:type" content="website">
-<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 rx=%2220%22 fill=%22%23D62839%22/><text x=%2250%22 y=%2266%22 font-size=%2255%22 font-family=%22sans-serif%22 font-weight=%22700%22 fill=%22white%22 text-anchor=%22middle%22>M</text></svg>">
+<meta property="og:image" content="assets/social-share.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="MSQM Premium 4-in-1 Grooming Set">
+<meta name="twitter:description" content="Your own personal grooming set. Clipper, trimmer, nose and ear trimmer, and foil shaver in one kit. Free nationwide delivery, pay on delivery.">
+<meta name="twitter:image" content="assets/social-share.png">
+<link rel="icon" type="image/png" href="assets/favicon.png">
+<link rel="apple-touch-icon" href="assets/favicon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -109,11 +115,9 @@
     white-space:nowrap;
   }
   .logo-mark{
-    width:32px;height:32px;border-radius:9px;
-    background:var(--primary);
-    color:#fff;display:flex;align-items:center;justify-content:center;
-    font-size:18px;
+    height:30px; width:auto;
     flex-shrink:0;
+    display:block;
   }
   .header-cta{ font-size:clamp(12.5px,3.4vw,14px); padding:10px 16px; white-space:nowrap; flex-shrink:0; }
   @media (min-width:480px){ .header-row{ padding:16px 24px; } .header-cta{ padding:12px 22px; } }
@@ -126,21 +130,25 @@
   @media (min-width:768px){ .hero{padding:88px 0 110px;} }
   .hero-grid{
     display:grid;
-    gap:40px;
-    align-items:center;
+    gap:32px;
+    grid-template-columns:1fr;
+    grid-template-areas:
+      "copy"
+      "visual"
+      "ctas";
   }
+  .hero-copy{ grid-area:copy; }
+  .hero-visual{ grid-area:visual; }
+  .hero-ctas{ grid-area:ctas; }
   @media (min-width:900px){
-    .hero-grid{ grid-template-columns:1.1fr 0.9fr; gap:56px; }
-  }
-  .eyebrow{
-    display:inline-block;
-    color:var(--primary-dark);
-    background:rgba(214,40,57,0.08);
-    padding:7px 16px;
-    border-radius:999px;
-    font-weight:600;
-    font-size:14px;
-    margin-bottom:20px;
+    .hero-grid{
+      grid-template-columns:1.1fr 0.9fr;
+      gap:56px;
+      align-items:center;
+      grid-template-areas:
+        "copy visual"
+        "ctas visual";
+    }
   }
   .hero h1{
     font-size:clamp(2.4rem, 5.5vw, 3.7rem);
@@ -150,14 +158,16 @@
     font-size:19px;
     color:var(--ink-soft);
     max-width:46ch;
-    margin-bottom:30px;
+    margin-bottom:0;
   }
-  .hero-cta-row{ display:flex; flex-wrap:wrap; gap:14px; margin-bottom:28px; }
+  .hero-cta-row{ display:grid; grid-template-columns:repeat(2, minmax(0,1fr)); gap:14px; }
+  .hero-cta-row .btn{ width:100%; }
   .hero-trust{
-    display:flex; flex-wrap:wrap; gap:22px;
-    font-size:14px; color:var(--ink-soft); font-weight:600;
+    display:flex; flex-wrap:wrap; justify-content:center; align-items:center; gap:10px;
+    font-size:14px; color:var(--ink-soft); font-weight:600; line-height:1.4;
+    margin-top:18px;
   }
-  .hero-trust span{ display:flex; align-items:center; gap:7px; }
+  .hero-trust .sep{ color:var(--line); font-weight:400; }
   .hero-image{
     position:relative;
     border-radius:22px;
@@ -176,7 +186,11 @@
 
   /* Problem / Agitate - dark */
   .problem{ background:var(--ink); color:#fff; }
-  .problem h2{ color:#fff; font-size:clamp(1.9rem,4vw,2.6rem); max-width:18ch; margin-bottom:44px;}
+  .problem-grid{ display:grid; gap:40px; align-items:center; }
+  @media (min-width:860px){ .problem-grid{ grid-template-columns:1.15fr 0.85fr; gap:56px; } }
+  .problem-photo{ border-radius:18px; overflow:hidden; aspect-ratio:6/5; border:1px solid rgba(255,255,255,0.12); }
+  .problem-photo img{ width:100%; height:100%; object-fit:cover; display:block; }
+  .problem h2{ color:#fff; font-size:clamp(1.9rem,4vw,2.6rem); max-width:26ch; margin-bottom:44px;}
   .problem-list{ display:grid; gap:20px; }
   @media (min-width:768px){ .problem-list{ grid-template-columns:repeat(3,1fr); } }
   .problem-item{
@@ -192,6 +206,11 @@
 
   /* Solution grid */
   .solution{ background:var(--surface); }
+  .solution-intro{ display:grid; gap:32px; align-items:center; margin-bottom:48px; }
+  @media (min-width:860px){ .solution-intro{ grid-template-columns:1.2fr 0.8fr; gap:48px; } }
+  .solution-intro .section-head{ margin-bottom:0; }
+  .solution-photo{ border-radius:16px; overflow:hidden; aspect-ratio:1/1; border:1px solid var(--line); }
+  .solution-photo img{ width:100%; height:100%; object-fit:cover; display:block; }
   .feat-grid{
     display:grid; gap:18px;
     grid-template-columns:repeat(2,1fr);
@@ -209,6 +228,10 @@
 
   /* How it works - timeline */
   .how{ background:var(--alt); }
+  .how-grid{ display:grid; gap:40px; align-items:center; }
+  @media (min-width:860px){ .how-grid{ grid-template-columns:1.1fr 0.9fr; gap:56px; } }
+  .how-photo{ border-radius:16px; overflow:hidden; aspect-ratio:6/5; border:1px solid var(--line); }
+  .how-photo img{ width:100%; height:100%; object-fit:cover; display:block; }
   .timeline{ display:grid; gap:0; counter-reset:step; }
   .t-step{
     display:grid; grid-template-columns:56px 1fr; gap:20px;
@@ -254,11 +277,16 @@
     padding:8px 16px; border-radius:999px;
     display:inline-block; margin-bottom:10px;
   }
-  .bonus-photo{ width:130px; flex-shrink:0; border-radius:12px; overflow:hidden; aspect-ratio:1/2; }
+  .bonus-photo{ width:100%; max-width:280px; margin:0 auto; flex-shrink:0; border-radius:12px; overflow:hidden; aspect-ratio:1/2; }
+  @media (min-width:720px){ .bonus-photo{ width:280px; max-width:none; margin:0; } }
   .bonus-photo img{ width:100%; height:100%; object-fit:cover; display:block; }
 
   /* Pricing - dark full bleed */
-  .pricing{ background:var(--ink); color:#fff; }
+  .pricing{ position:relative; background:var(--ink); color:#fff; overflow:hidden; }
+  .pricing-bg{ position:absolute; inset:0; z-index:0; }
+  .pricing-bg img{ width:100%; height:100%; object-fit:cover; }
+  .pricing-bg-overlay{ position:absolute; inset:0; background:linear-gradient(180deg, rgba(24,24,24,0.88), rgba(24,24,24,0.97)); }
+  .pricing > .wrap{ position:relative; z-index:1; }
   .price-card{
     background:#211f1f;
     border-radius:20px;
@@ -331,7 +359,7 @@
   .g-grid{ display:grid; gap:36px; align-items:center; }
   @media (min-width:820px){ .g-grid{ grid-template-columns:auto 1fr; } }
   .g-photo{
-    width:190px; border-radius:18px; overflow:hidden;
+    width:260px; border-radius:18px; overflow:hidden;
     flex-shrink:0; aspect-ratio:1/1;
     border:3px solid var(--primary);
   }
@@ -358,6 +386,11 @@
 
   /* Support */
   .support{ background:var(--base); text-align:center; }
+  .support-photo{
+    width:110px; height:110px; border-radius:50%; overflow:hidden;
+    margin:0 auto 24px; border:3px solid var(--primary);
+  }
+  .support-photo img{ width:100%; height:100%; object-fit:cover; display:block; }
   .support h2{ font-size:clamp(1.8rem,3.6vw,2.3rem); }
   .support p{ color:var(--ink-soft); max-width:46ch; margin-left:auto; margin-right:auto; }
   .support-links{ display:flex; flex-wrap:wrap; justify-content:center; gap:16px; margin-top:26px; }
@@ -377,8 +410,13 @@
     display:flex; flex-wrap:wrap; gap:16px; justify-content:space-between; align-items:center;
     border-top:1px solid rgba(255,255,255,0.12); padding-top:26px; font-size:13px; color:#9c9c9c;
   }
+  .footer-contacts{ display:flex; align-items:center; gap:10px; flex-wrap:wrap; }
+  .footer-contacts a{ color:#9c9c9c; text-decoration:none; }
+  .footer-contacts a:hover{ color:#fff; text-decoration:underline; }
+  .footer-contacts .sep{ color:rgba(255,255,255,0.25); }
   @media (max-width:640px){
     .footer-bottom{ flex-direction:column; justify-content:center; text-align:center; gap:8px; }
+    .footer-contacts{ justify-content:center; }
   }
 
   [data-reveal]{ opacity:0; transform:translateY(16px); transition:opacity 0.6s ease, transform 0.6s ease; }
@@ -389,16 +427,21 @@
     .hero-grid > div:first-child{ text-align:center; }
     .hero h1{ max-width:none; }
     .hero-sub{ margin-left:auto; margin-right:auto; }
-    .hero-cta-row{ justify-content:center; }
-    .hero-trust{ justify-content:center; }
     .hero-image{ max-height:60vh; margin:0 auto; }
+    .hero-cta-row{ grid-template-columns:1fr; }
+    .hero-trust{ line-height:1.15; gap:6px 10px; }
+
+    .problem h2{ max-width:100%; }
+
+    .feat-grid{ grid-template-columns:1fr; }
+    .feat-card{ display:flex; align-items:center; gap:16px; text-align:left; }
+    .feat-card svg{ width:42px; height:42px; margin-bottom:0; flex-shrink:0; }
 
     .section-head{ margin-left:auto; margin-right:auto; text-align:center; }
 
     .bonus-card{ text-align:center; justify-items:center; }
-    .bonus-photo{ margin:0 auto; }
 
-    .g-text{ text-align:center; }
+    .g-text{ text-align:left; }
     .g-photo{ margin:0 auto; }
     .g-points{ text-align:left; max-width:340px; margin-left:auto; margin-right:auto; }
 
@@ -419,64 +462,75 @@
 
 <header>
   <div class="header-row">
-    <div class="logo"><span class="logo-mark">M</span>MSQM STORE</div>
+    <div class="logo"><img class="logo-mark" src="assets/msqm-logo.png" alt="MSQM logo">STORE</div>
     <a href="#order" class="btn btn-primary header-cta">Order Now</a>
   </div>
 </header>
 
 <section class="hero">
   <div class="wrap hero-grid">
-    <div data-reveal>
-      <span class="eyebrow">Your Own Grooming Set</span>
-      <h1>Your Barber's Clippers Touched How Many Heads Today?</h1>
+    <div class="hero-copy" data-reveal>
+      <h1>How Many Heads Did Your Barber's Clippers Touch Today?</h1>
       <p class="hero-sub">Own the MSQM Premium 4-in-1 Grooming Set. Groom at home, take it to your barber, or pack it for a trip. One kit, zero sharing.</p>
+    </div>
+    <div class="hero-visual" data-reveal>
+      <div class="hero-image">
+        <img src="assets/hero-product.jpg" alt="Man holding the MSQM Premium 4-in-1 Grooming Set" width="900" height="675" loading="eager"
+          onerror="this.style.display='none'; this.parentElement.querySelector('.ph-fallback').style.display='flex';">
+        <div class="ph-fallback" style="display:none; position:absolute; inset:0; align-items:center; justify-content:center; flex-direction:column;">
+          <svg viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg" style="width:52%;opacity:0.9;">
+            <rect x="70" y="20" width="30" height="140" rx="10" fill="#D62839"/>
+            <rect x="76" y="30" width="18" height="70" rx="4" fill="#181818"/>
+            <rect x="60" y="150" width="60" height="16" rx="6" fill="#F4A300"/>
+          </svg>
+          <div class="ph-label">Hero photo goes here, save as assets/hero-product.jpg</div>
+        </div>
+      </div>
+      <div class="hero-trust">
+        <span>Free nationwide delivery</span><span class="sep">|</span><span>Pay on delivery</span><span class="sep">|</span><span>1-year warranty</span>
+      </div>
+    </div>
+    <div class="hero-ctas" data-reveal>
       <div class="hero-cta-row">
         <a href="#pricing" class="btn btn-primary">See The Full Set &amp; Price</a>
         <a href="#how" class="btn btn-ghost">How It Works</a>
-      </div>
-      <div class="hero-trust">
-        <span>Free nationwide delivery</span>
-        <span>Pay on delivery</span>
-        <span>1-year warranty</span>
-      </div>
-    </div>
-    <div class="hero-image" data-reveal>
-      <img src="assets/hero-product.png" alt="Man holding the MSQM Premium 4-in-1 Grooming Set" width="900" height="675" loading="eager"
-        onerror="this.style.display='none'; this.parentElement.querySelector('.ph-fallback').style.display='flex';">
-      <div class="ph-fallback" style="display:none; position:absolute; inset:0; align-items:center; justify-content:center; flex-direction:column;">
-        <svg viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg" style="width:52%;opacity:0.9;">
-          <rect x="70" y="20" width="30" height="140" rx="10" fill="#D62839"/>
-          <rect x="76" y="30" width="18" height="70" rx="4" fill="#181818"/>
-          <rect x="60" y="150" width="60" height="16" rx="6" fill="#F4A300"/>
-        </svg>
-        <div class="ph-label">Hero photo goes here, save as assets/hero-product.png</div>
       </div>
     </div>
   </div>
 </section>
 
 <section class="problem">
-  <div class="wrap">
-    <h2 data-reveal>Sharing tools at the barbershop is a habit nobody questions, until something goes wrong</h2>
-    <div class="problem-list">
-      <div class="problem-item" data-reveal>
-        <p>Shared clippers and blades pass through hands, and heads, you know nothing about.</p>
+  <div class="wrap problem-grid">
+    <div>
+      <h2 data-reveal>Sharing tools at the barbershop is a habit nobody questions, until something goes wrong</h2>
+      <div class="problem-list">
+        <div class="problem-item" data-reveal>
+          <p>Shared clippers and blades pass through hands, and heads, you know nothing about.</p>
+        </div>
+        <div class="problem-item" data-reveal>
+          <p>A skin infection or irritation can cost far more than a grooming kit ever would.</p>
+        </div>
+        <div class="problem-item" data-reveal>
+          <p>You still queue, still pay per visit, and still wait for your turn every single time.</p>
+        </div>
       </div>
-      <div class="problem-item" data-reveal>
-        <p>A skin infection or irritation can cost far more than a grooming kit ever would.</p>
-      </div>
-      <div class="problem-item" data-reveal>
-        <p>You still queue, still pay per visit, and still wait for your turn every single time.</p>
-      </div>
+    </div>
+    <div class="problem-photo" data-reveal>
+      <img src="assets/problem-shared-tools.jpg" alt="Row of worn, shared clippers on a barbershop shelf" width="700" height="583" loading="lazy">
     </div>
   </div>
 </section>
 
 <section class="solution" id="features">
   <div class="wrap">
-    <div class="section-head" data-reveal>
-      <h2>Everything you need, in one kit</h2>
-      <p>Four tools built into one set, so you can handle your hair, beard, and finishing touches without borrowing anything from anyone.</p>
+    <div class="solution-intro">
+      <div class="section-head" data-reveal>
+        <h2>Everything you need, in one kit</h2>
+        <p>Four tools built into one set, so you can handle your hair, beard, and finishing touches without borrowing anything from anyone.</p>
+      </div>
+      <div class="solution-photo" data-reveal>
+        <img src="assets/solution-detail.jpg" alt="Close-up of the MSQM T-blade trimmer outlining a hairline" width="700" height="700" loading="lazy">
+      </div>
     </div>
     <div class="feat-grid">
       <div class="feat-card" data-reveal>
@@ -529,22 +583,27 @@
       <h2>How it works</h2>
       <p>From order to your doorstep, nationwide.</p>
     </div>
-    <div class="timeline">
-      <div class="t-step" data-reveal>
-        <div class="t-num">1</div>
-        <div><h4>Fill the order form</h4><p>Give us your name, phone number, and delivery address below.</p></div>
+    <div class="how-grid">
+      <div class="timeline">
+        <div class="t-step" data-reveal>
+          <div class="t-num">1</div>
+          <div><h4>Fill the order form</h4><p>Give us your name, phone number, and delivery address below.</p></div>
+        </div>
+        <div class="t-step" data-reveal>
+          <div class="t-num">2</div>
+          <div><h4>We confirm your order</h4><p>Our team calls or messages you on WhatsApp to confirm your details.</p></div>
+        </div>
+        <div class="t-step" data-reveal>
+          <div class="t-num">3</div>
+          <div><h4>Your set arrives</h4><p>We deliver nationwide, straight to your address.</p></div>
+        </div>
+        <div class="t-step" data-reveal>
+          <div class="t-num">4</div>
+          <div><h4>Pay on delivery</h4><p>Check the set, then pay the delivery agent once it's in your hands.</p></div>
+        </div>
       </div>
-      <div class="t-step" data-reveal>
-        <div class="t-num">2</div>
-        <div><h4>We confirm your order</h4><p>Our team calls or messages you on WhatsApp to confirm your details.</p></div>
-      </div>
-      <div class="t-step" data-reveal>
-        <div class="t-num">3</div>
-        <div><h4>Your set arrives</h4><p>We deliver nationwide, straight to your address.</p></div>
-      </div>
-      <div class="t-step" data-reveal>
-        <div class="t-num">4</div>
-        <div><h4>Pay on delivery</h4><p>Check the set, then pay the delivery agent once it's in your hands.</p></div>
+      <div class="how-photo" data-reveal>
+        <img src="assets/how-it-works-delivery.jpg" alt="Delivery rider handing an MSQM parcel to a customer at his door" width="700" height="583" loading="lazy">
       </div>
     </div>
   </div>
@@ -581,7 +640,7 @@
     </div>
     <div class="bonus-card" data-reveal>
       <div class="bonus-photo">
-        <img src="assets/bonus-cape.png" alt="MSQM professional barber's cape" width="500" height="1000" loading="lazy"
+        <img src="assets/bonus-cape.jpg" alt="MSQM professional barber's cape" width="500" height="1000" loading="lazy"
           onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
         <div style="display:none; width:100%; height:100%; align-items:center; justify-content:center; background:linear-gradient(155deg, var(--surface), var(--alt));">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" style="width:34px;height:34px;color:var(--secondary);"><path d="M4 4c4 2 12 2 16 0M4 4l2 15a2 2 0 0 0 2 1.8h8A2 2 0 0 0 18 19l2-15"/></svg>
@@ -597,6 +656,10 @@
 </section>
 
 <section class="pricing" id="pricing">
+  <div class="pricing-bg">
+    <img src="assets/pricing-flatlay.jpg" alt="" loading="lazy" width="700" height="525">
+    <div class="pricing-bg-overlay"></div>
+  </div>
   <div class="wrap">
     <div class="section-head" data-reveal>
       <h2 style="color:#fff;">One set. One price. No hidden extras.</h2>
@@ -654,7 +717,7 @@
         <label for="waNumber">WhatsApp Number</label>
         <div class="phone-with-code">
           <select id="waCode" required></select>
-          <input type="tel" id="waNumber" placeholder="Number without the leading 0" required>
+          <input type="tel" id="waNumber" placeholder="e.g. 8012345678" required>
         </div>
         <div class="field-error" id="waError">Enter a valid WhatsApp number for the selected country.</div>
       </div>
@@ -677,8 +740,8 @@
           <div class="field-error">Please select your state.</div>
         </div>
       </div>
-      <button type="submit" class="btn btn-primary">Continue to Confirm Order</button>
-      <p class="form-note">Next, you'll see your order summary and a button to confirm and send it to us on WhatsApp.</p>
+      <button type="submit" class="btn btn-primary">Place Your Order</button>
+      <p class="form-note">Next, you'll see a button to confirm your order.</p>
     </form>
   </div>
 </section>
@@ -686,7 +749,7 @@
 <section class="guarantee">
   <div class="wrap g-grid">
     <div class="g-photo" data-reveal>
-      <img src="assets/guarantee-check.png" alt="Man testing the MSQM nose and ear trimmer" width="700" height="700" loading="lazy"
+      <img src="assets/guarantee-check.jpg" alt="Man testing the MSQM nose and ear trimmer" width="700" height="700" loading="lazy"
         onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
       <div style="display:none; width:100%; height:100%; align-items:center; justify-content:center; background:linear-gradient(155deg, var(--surface), var(--alt));">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" style="width:44px;height:44px;color:var(--primary);"><path d="M12 3l7 3v6c0 4.5-3 7.5-7 9-4-1.5-7-4.5-7-9V6l7-3z"/><path d="M9 12l2 2 4-4"/></svg>
@@ -694,7 +757,7 @@
     </div>
     <div class="g-text" data-reveal>
       <h2>Backed by a money-back guarantee</h2>
-      <p>If your set is not exactly as advertised, tell us within 24 hours of testing and confirming your delivery, and we'll make it right.</p>
+      <p>If your MSQM Premium 4-in-1 Grooming Set is not exactly as advertised, tell us within 24 hours of testing and confirming your delivery, and we'll make it right.</p>
       <div class="g-points">
         <div class="g-point"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12l4 4 10-10"/></svg> Money-back if it's not as advertised</div>
         <div class="g-point"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12l4 4 10-10"/></svg> 24 hours to test and confirm</div>
@@ -713,7 +776,7 @@
     <div id="faqList" data-reveal>
       <div class="faq-item">
         <button class="faq-q">Do I pay before or after delivery?<span class="plus">+</span></button>
-        <div class="faq-a"><p>After. You pay the delivery agent once your MSQM set is in your hands.</p></div>
+        <div class="faq-a"><p>After. You pay the delivery agent or directly to our account once your MSQM Premium 4-in-1 Grooming Set is in your hands.</p></div>
       </div>
       <div class="faq-item">
         <button class="faq-q">What's included in the box?<span class="plus">+</span></button>
@@ -729,7 +792,7 @@
       </div>
       <div class="faq-item">
         <button class="faq-q">Is there a warranty?<span class="plus">+</span></button>
-        <div class="faq-a"><p>Yes, every MSQM set comes with a 1-year warranty, plus a money-back guarantee if it's not exactly as advertised.</p></div>
+        <div class="faq-a"><p>Yes, every MSQM Premium 4-in-1 Grooming Set comes with a 1-year warranty, plus a 24-hour money-back guarantee if it's not exactly as advertised.</p></div>
       </div>
       <div class="faq-item">
         <button class="faq-q">How long does delivery take?<span class="plus">+</span></button>
@@ -741,6 +804,9 @@
 
 <section class="support">
   <div class="wrap">
+    <div class="support-photo" data-reveal>
+      <img src="assets/support-contact.jpg" alt="MSQM customer support team member" width="500" height="500" loading="lazy">
+    </div>
     <h2>Still have a question?</h2>
     <p>Reach us directly on WhatsApp or by phone, we're happy to help before you order.</p>
     <div class="support-links">
@@ -763,13 +829,20 @@
       <a href="#order" class="btn btn-primary">Order Your MSQM Set Now</a>
     </div>
     <div class="footer-bottom">
-      <div>&copy; 2026 MSQM STORE. All rights reserved.</div>
-      <div>WhatsApp: 0913 460 1088 &nbsp;|&nbsp; Call: 0806 492 6866</div>
+      <div>&copy; <span id="copyYear">2026</span> MSQM STORE. All rights reserved.</div>
+      <div class="footer-contacts">
+        <a href="https://wa.me/2349134601088" target="_blank" rel="noopener">WhatsApp: 0913 460 1088</a>
+        <span class="sep">|</span>
+        <a href="tel:+2348064926866">Call: 0806 492 6866</a>
+      </div>
     </div>
   </div>
 </footer>
 
 <script>
+  // Dynamic copyright year
+  document.getElementById('copyYear').textContent = new Date().getFullYear();
+
   // Reveal on scroll
   const revealEls = document.querySelectorAll('[data-reveal]');
   const io = new IntersectionObserver((entries)=>{
