@@ -8,12 +8,12 @@
 <meta property="og:title" content="MSQM Premium 4-in-1 Grooming Set">
 <meta property="og:description" content="Your own personal grooming set. Clipper, trimmer, nose and ear trimmer, and foil shaver in one kit. Free nationwide delivery, pay on delivery.">
 <meta property="og:type" content="website">
-<meta property="og:url" content="https://tgnglobal.github.io/msqmstore/">
-<meta property="og:image" content="https://tgnglobal.github.io/msqmstore/assets/social-share.jpg">
+<meta property="og:url" content="https://REPLACE-WITH-YOUR-USERNAME.github.io/REPLACE-WITH-REPO-NAME/">
+<meta property="og:image" content="https://REPLACE-WITH-YOUR-USERNAME.github.io/REPLACE-WITH-REPO-NAME/assets/social-share.jpg">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="MSQM Premium 4-in-1 Grooming Set">
 <meta name="twitter:description" content="Your own personal grooming set. Clipper, trimmer, nose and ear trimmer, and foil shaver in one kit. Free nationwide delivery, pay on delivery.">
-<meta name="twitter:image" content="https://tgnglobal.github.io/msqmstore/assets/social-share.jpg">
+<meta name="twitter:image" content="https://REPLACE-WITH-YOUR-USERNAME.github.io/REPLACE-WITH-REPO-NAME/assets/social-share.jpg">
 <link rel="icon" type="image/jpeg" href="assets/favicon.jpg">
 <link rel="apple-touch-icon" href="assets/favicon.jpg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -284,11 +284,31 @@
   .bonus-photo img{ width:100%; height:100%; object-fit:cover; display:block; }
 
   /* Pricing - dark full bleed */
-  .pricing{ position:relative; background:var(--ink); color:#fff; overflow:hidden; }
-  .pricing-bg{ position:absolute; inset:0; z-index:0; }
-  .pricing-bg img{ width:100%; height:100%; object-fit:cover; }
-  .pricing-bg-overlay{ position:absolute; inset:0; background:linear-gradient(180deg, rgba(24,24,24,0.88), rgba(24,24,24,0.97)); }
-  .pricing > .wrap{ position:relative; z-index:1; }
+  .pricing{ background:var(--ink); color:#fff; }
+  .pricing-grid{
+    display:grid; gap:36px;
+    grid-template-columns:1fr;
+    grid-template-areas:
+      "image"
+      "content";
+  }
+  @media (min-width:860px){
+    .pricing-grid{
+      grid-template-columns:1fr 1fr;
+      grid-template-areas:"content image";
+      gap:56px;
+      align-items:center;
+    }
+  }
+  .pricing-content{ grid-area:content; }
+  .pricing-image{
+    grid-area:image;
+    border-radius:18px; overflow:hidden;
+    aspect-ratio:4/3;
+    border:1px solid rgba(255,255,255,0.14);
+  }
+  .pricing-image img{ width:100%; height:100%; object-fit:cover; display:block; }
+  .pricing .section-head{ margin-bottom:32px; }
   .price-card{
     background:#211f1f;
     border-radius:20px;
@@ -489,7 +509,7 @@
         </div>
       </div>
       <div class="hero-trust">
-        <div class="trust-row"><span>Free delivery</span><span class="sep">|</span><span>Pay on delivery</span><span class="sep">|</span></div>
+        <div class="trust-row"><span>Free nationwide delivery</span><span class="sep">|</span><span>Pay on delivery</span></div>
         <div class="trust-row"><span>1-year warranty</span></div>
       </div>
     </div>
@@ -508,7 +528,7 @@
       <h2 data-reveal>Sharing tools at the barbershop is a habit nobody questions, until something goes wrong</h2>
       <div class="problem-list">
         <div class="problem-item" data-reveal>
-          <p>Shared clippers and blades pass through hands and heads you know nothing about.</p>
+          <p>Shared clippers and blades pass through hands, and heads, you know nothing about.</p>
         </div>
         <div class="problem-item" data-reveal>
           <p>A skin infection or irritation can cost far more than a grooming kit ever would.</p>
@@ -590,7 +610,7 @@
       <div class="timeline">
         <div class="t-step" data-reveal>
           <div class="t-num">1</div>
-          <div><h4>Fill out the order form</h4><p>Give us your name, phone number, and delivery address below.</p></div>
+          <div><h4>Fill the order form</h4><p>Give us your name, phone number, and delivery address below.</p></div>
         </div>
         <div class="t-step" data-reveal>
           <div class="t-num">2</div>
@@ -659,30 +679,31 @@
 </section>
 
 <section class="pricing" id="pricing">
-  <div class="pricing-bg">
-    <img src="assets/pricing-flatlay.jpg" alt="" loading="lazy" width="700" height="525">
-    <div class="pricing-bg-overlay"></div>
-  </div>
-  <div class="wrap">
-    <div class="section-head" data-reveal>
-      <h2 style="color:#fff;">One set. One price. No hidden extras.</h2>
-      <p style="color:#C8C8C8;">Everything you need to stop sharing tools, in a single box.</p>
+  <div class="wrap pricing-grid">
+    <div class="pricing-image" data-reveal>
+      <img src="assets/pricing-flatlay.jpg" alt="The complete MSQM Premium 4-in-1 Grooming Set laid out" width="700" height="525" loading="lazy">
     </div>
-    <div class="price-card" data-reveal>
-      <div class="prod-name">MSQM PREMIUM 4-IN-1 GROOMING SET</div>
-      <div class="price-row">
-        <span class="price-now">&#8358;120,000</span>
-        <span class="price-was">&#8358;150,000</span>
+    <div class="pricing-content" data-reveal>
+      <div class="section-head">
+        <h2 style="color:#fff;">One set. One price. No hidden extras.</h2>
+        <p style="color:#C8C8C8;">Everything you need to stop sharing tools, in a single box.</p>
       </div>
-      <p class="price-note">Pay on delivery. Free nationwide shipping.</p>
-      <ul class="price-includes">
-        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12l4 4 10-10"/></svg> Hair clipper, T-blade trimmer, nose &amp; ear trimmer, foil shaver</li>
-        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12l4 4 10-10"/></svg> USB charging cable and guide combs</li>
-        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12l4 4 10-10"/></svg> Premium travel case</li>
-        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12l4 4 10-10"/></svg> Free professional barber's cape</li>
-        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12l4 4 10-10"/></svg> 1-year warranty</li>
-      </ul>
-      <a href="#order" class="btn btn-primary" style="width:100%;">Order Now</a>
+      <div class="price-card">
+        <div class="prod-name">MSQM PREMIUM 4-IN-1 GROOMING SET</div>
+        <div class="price-row">
+          <span class="price-now">&#8358;120,000</span>
+          <span class="price-was">&#8358;150,000</span>
+        </div>
+        <p class="price-note">Pay on delivery. Free nationwide shipping.</p>
+        <ul class="price-includes">
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12l4 4 10-10"/></svg> Hair clipper, T-blade trimmer, nose &amp; ear trimmer, foil shaver</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12l4 4 10-10"/></svg> USB charging cable and guide combs</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12l4 4 10-10"/></svg> Premium travel case</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12l4 4 10-10"/></svg> Free professional barber's cape</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12l4 4 10-10"/></svg> 1-year warranty</li>
+        </ul>
+        <a href="#order" class="btn btn-primary" style="width:100%;">Order Now</a>
+      </div>
     </div>
   </div>
 </section>
@@ -691,9 +712,9 @@
   <div class="wrap order-grid">
     <div class="order-info" data-reveal>
       <h2>Place your order</h2>
-      <p>Fill out the form and we will reach out on WhatsApp to confirm your order and delivery address.</p>
+      <p>Fill the form and we will reach out on WhatsApp to confirm your order and delivery address.</p>
       <ul>
-        <li>No payment needed now; pay when it's delivered.</li>
+        <li>No payment needed now, pay when it's delivered.</li>
         <li>Free delivery, anywhere in Nigeria.</li>
         <li>Be ready to receive your order within 24 hours of confirming, or arrange for someone else to receive it on your behalf.</li>
       </ul>
@@ -811,7 +832,7 @@
       <img src="assets/support-contact.jpg" alt="MSQM customer support team member" width="500" height="500" loading="lazy">
     </div>
     <h2>Still have a question?</h2>
-    <p>Reach us directly on WhatsApp or by phone; we're happy to help before you order.</p>
+    <p>Reach us directly on WhatsApp or by phone, we're happy to help before you order.</p>
     <div class="support-links">
       <a class="support-link" href="https://wa.me/2349134601088" target="_blank" rel="noopener">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M21 11.5a8.5 8.5 0 0 1-12.5 7.5L3 20l1-5.5A8.5 8.5 0 1 1 21 11.5z"/></svg>
