@@ -8,12 +8,12 @@
 <meta property="og:title" content="MSQM Premium 4-in-1 Grooming Set">
 <meta property="og:description" content="Your own personal grooming set. Clipper, trimmer, nose and ear trimmer, and foil shaver in one kit. Free nationwide delivery, pay on delivery.">
 <meta property="og:type" content="website">
-<meta property="og:url" content="https://tgnglobal.github.io/msqmstore/">
-<meta property="og:image" content="https://tgnglobal.github.io/msqmstore/assets/social-share.jpg">
+<meta property="og:url" content="https://REPLACE-WITH-YOUR-USERNAME.github.io/REPLACE-WITH-REPO-NAME/">
+<meta property="og:image" content="https://REPLACE-WITH-YOUR-USERNAME.github.io/REPLACE-WITH-REPO-NAME/assets/social-share.jpg">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="MSQM Premium 4-in-1 Grooming Set">
 <meta name="twitter:description" content="Your own personal grooming set. Clipper, trimmer, nose and ear trimmer, and foil shaver in one kit. Free nationwide delivery, pay on delivery.">
-<meta name="twitter:image" content="https://tgnglobal.github.io/msqmstore/assets/social-share.jpg">
+<meta name="twitter:image" content="https://REPLACE-WITH-YOUR-USERNAME.github.io/REPLACE-WITH-REPO-NAME/assets/social-share.jpg">
 <link rel="icon" type="image/png" href="assets/favicon.png">
 <link rel="apple-touch-icon" href="assets/favicon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -189,6 +189,7 @@
   /* Problem / Agitate - dark */
   .problem{ background:var(--ink); color:#fff; }
   .problem-grid{ display:grid; gap:40px; align-items:center; }
+  @media (max-width:859px){ .problem-photo{ order:-1; } }
   @media (min-width:860px){ .problem-grid{ grid-template-columns:1.15fr 0.85fr; gap:56px; } }
   .problem-photo{ border-radius:18px; overflow:hidden; aspect-ratio:6/5; border:1px solid rgba(255,255,255,0.12); }
   .problem-photo img{ width:100%; height:100%; object-fit:cover; display:block; }
@@ -208,11 +209,6 @@
 
   /* Solution grid */
   .solution{ background:var(--surface); }
-  .solution-intro{ display:grid; gap:32px; align-items:center; margin-bottom:48px; }
-  @media (min-width:860px){ .solution-intro{ grid-template-columns:1.2fr 0.8fr; gap:48px; } }
-  .solution-intro .section-head{ margin-bottom:0; }
-  .solution-photo{ border-radius:16px; overflow:hidden; aspect-ratio:1/1; border:1px solid var(--line); }
-  .solution-photo img{ width:100%; height:100%; object-fit:cover; display:block; }
   .feat-grid{
     display:grid; gap:18px;
     grid-template-columns:repeat(2,1fr);
@@ -221,16 +217,41 @@
   .feat-card{
     background:var(--base);
     border-radius:var(--radius);
-    padding:26px 20px;
+    overflow:hidden;
     border:1px solid var(--line);
   }
-  .feat-card svg{ width:30px; height:30px; color:var(--primary); margin-bottom:14px; }
+  .feat-card-photo{
+    position:relative;
+    aspect-ratio:1/1;
+    background:var(--surface);
+  }
+  .feat-card-photo img{ width:100%; height:100%; object-fit:cover; display:block; }
+  .feat-icon-fallback{
+    display:flex; align-items:center; justify-content:center;
+    width:100%; height:100%;
+    background:linear-gradient(155deg, var(--surface), var(--alt));
+  }
+  .feat-icon-fallback svg{ width:34px; height:34px; color:var(--primary); }
+  .feat-card-body{ padding:16px 16px 20px; }
   .feat-card h4{ font-family:var(--font-body); font-weight:700; font-size:16px; margin-bottom:6px; }
   .feat-card p{ font-size:14px; color:var(--ink-soft); margin:0; }
 
   /* How it works - timeline */
+  /* Unbox / what's in the case */
+  .unbox{ background:var(--base); }
+  .unbox-grid{ display:grid; gap:36px; align-items:center; }
+  @media (min-width:860px){ .unbox-grid{ grid-template-columns:0.85fr 1.15fr; gap:56px; } }
+  .unbox-photo{ border-radius:18px; overflow:hidden; aspect-ratio:625/853; border:1px solid var(--line); max-width:360px; margin:0 auto; }
+  @media (min-width:860px){ .unbox-photo{ max-width:none; margin:0; } }
+  .unbox-photo img{ width:100%; height:100%; object-fit:cover; display:block; }
+  .unbox-content .section-head{ margin-bottom:22px; }
+  .unbox-list{ list-style:none; padding:0; margin:0; display:grid; gap:12px; }
+  .unbox-list li{ display:flex; gap:10px; font-size:15.5px; color:var(--ink-soft); }
+  .unbox-list svg{ width:19px; height:19px; color:var(--primary); flex-shrink:0; margin-top:2px; }
+
   .how{ background:var(--alt); }
   .how-grid{ display:grid; gap:40px; align-items:center; }
+  @media (max-width:859px){ .how-photo{ order:-1; } }
   @media (min-width:860px){ .how-grid{ grid-template-columns:1.1fr 0.9fr; gap:56px; } }
   .how-photo{ border-radius:16px; overflow:hidden; aspect-ratio:6/5; border:1px solid var(--line); }
   .how-photo img{ width:100%; height:100%; object-fit:cover; display:block; }
@@ -330,6 +351,17 @@
 
   /* Order form */
   .order{ background:var(--base); }
+  .important-notice{
+    background:rgba(244,163,0,0.1);
+    border:1.5px solid rgba(244,163,0,0.4);
+    border-radius:14px;
+    padding:18px 22px;
+    font-size:14.5px;
+    line-height:1.6;
+    color:var(--ink-soft);
+    margin-bottom:36px;
+  }
+  .important-notice strong{ color:var(--ink); }
   .order-grid{ display:grid; gap:40px; }
   @media (min-width:900px){ .order-grid{ grid-template-columns:0.85fr 1.15fr; } }
   .order-info h2{ font-size:clamp(1.8rem,3.6vw,2.3rem); }
@@ -455,10 +487,6 @@
 
     .problem h2{ max-width:100%; }
 
-    .feat-grid{ grid-template-columns:1fr; }
-    .feat-card{ display:flex; align-items:center; gap:16px; text-align:left; }
-    .feat-card svg{ width:42px; height:42px; margin-bottom:0; flex-shrink:0; }
-
     .section-head{ margin-left:auto; margin-right:auto; text-align:center; }
 
     .bonus-card{ text-align:center; justify-items:center; }
@@ -466,6 +494,9 @@
     .g-text{ text-align:left; }
     .g-photo{ margin:0 auto; }
     .g-points{ text-align:left; max-width:340px; margin-left:auto; margin-right:auto; }
+
+    .unbox-content{ text-align:center; }
+    .unbox-list{ text-align:left; max-width:340px; margin-left:auto; margin-right:auto; }
 
     .order-info{ text-align:center; }
     .order-info ul{ text-align:left; max-width:360px; margin-left:auto; margin-right:auto; }
@@ -509,7 +540,7 @@
         </div>
       </div>
       <div class="hero-trust">
-        <div class="trust-row"><span>Free delivery</span><span class="sep">|</span><span>Pay on delivery</span><span class="sep">|</span></div>
+        <div class="trust-row"><span>Free nationwide delivery</span><span class="sep">|</span><span>Pay on delivery</span></div>
         <div class="trust-row"><span>1-year warranty</span></div>
       </div>
     </div>
@@ -546,56 +577,134 @@
 
 <section class="solution" id="features">
   <div class="wrap">
-    <div class="solution-intro">
-      <div class="section-head" data-reveal>
-        <h2>Everything you need, in one kit</h2>
-        <p>Four tools built into one set, so you can handle your hair, beard, and finishing touches without borrowing anything from anyone.</p>
-      </div>
-      <div class="solution-photo" data-reveal>
-        <img src="assets/solution-detail.jpg" alt="Close-up of the MSQM T-blade trimmer outlining a hairline" width="700" height="700" loading="lazy">
-      </div>
+    <div class="section-head" data-reveal>
+      <h2>Everything you need, in one kit</h2>
+      <p>Four tools built into one set, so you can handle your hair, beard, and finishing touches without borrowing anything from anyone.</p>
     </div>
     <div class="feat-grid">
       <div class="feat-card" data-reveal>
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="6" y="3" width="12" height="15" rx="2"/><path d="M9 21h6"/></svg>
-        <h4>Hair Clipper</h4>
-        <p>Clean, even cuts, every time you use it.</p>
+        <div class="feat-card-photo">
+          <img src="assets/hair-clipper-demo.jpg" alt="Barber using the MSQM hair clipper" width="700" height="700" loading="lazy"
+            onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+          <div class="feat-icon-fallback" style="display:none;">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="6" y="3" width="12" height="15" rx="2"/><path d="M9 21h6"/></svg>
+          </div>
+        </div>
+        <div class="feat-card-body">
+          <h4>Hair Clipper</h4>
+          <p>Clean, even cuts, every time you use it.</p>
+        </div>
       </div>
       <div class="feat-card" data-reveal>
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 12h16M8 6l-4 6 4 6M16 6l4 6-4 6"/></svg>
-        <h4>T-Blade Trimmer</h4>
-        <p>Sharp outlines and clean edges around the hairline.</p>
+        <div class="feat-card-photo">
+          <img src="assets/solution-detail.jpg" alt="Close-up of the MSQM T-blade trimmer outlining a hairline" width="700" height="700" loading="lazy"
+            onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+          <div class="feat-icon-fallback" style="display:none;">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 12h16M8 6l-4 6 4 6M16 6l4 6-4 6"/></svg>
+          </div>
+        </div>
+        <div class="feat-card-body">
+          <h4>T-Blade Trimmer</h4>
+          <p>Sharp outlines and clean edges around the hairline.</p>
+        </div>
       </div>
       <div class="feat-card" data-reveal>
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="8"/><path d="M9 12h6"/></svg>
-        <h4>Nose &amp; Ear Trimmer</h4>
-        <p>Handles the small details most barbers rush through.</p>
+        <div class="feat-card-photo">
+          <img src="assets/nose-ear-demo.jpg" alt="Man using the MSQM nose and ear trimmer" width="700" height="700" loading="lazy"
+            onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+          <div class="feat-icon-fallback" style="display:none;">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="8"/><path d="M9 12h6"/></svg>
+          </div>
+        </div>
+        <div class="feat-card-body">
+          <h4>Nose &amp; Ear Trimmer</h4>
+          <p>Handles the small details most barbers rush through.</p>
+        </div>
       </div>
       <div class="feat-card" data-reveal>
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="5" y="7" width="14" height="10" rx="3"/><path d="M9 7V5h6v2"/></svg>
-        <h4>Foil Shaver</h4>
-        <p>A close, smooth finish without a shared blade.</p>
+        <div class="feat-card-photo">
+          <img src="assets/foil-shaver-demo.jpg" alt="MSQM foil shaver giving a smooth head shave" width="700" height="700" loading="lazy"
+            onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+          <div class="feat-icon-fallback" style="display:none;">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="5" y="7" width="14" height="10" rx="3"/><path d="M9 7V5h6v2"/></svg>
+          </div>
+        </div>
+        <div class="feat-card-body">
+          <h4>Foil Shaver</h4>
+          <p>A close, smooth finish without a shared blade.</p>
+        </div>
       </div>
       <div class="feat-card" data-reveal>
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M13 2 4 14h6l-1 8 9-12h-6l1-8z"/></svg>
-        <h4>USB Fast Charging</h4>
-        <p>Charge from a power bank, laptop, or wall adapter.</p>
+        <div class="feat-card-photo">
+          <img src="assets/feature-usb-charging.jpg" alt="MSQM tool charging by USB cable" width="500" height="500" loading="lazy"
+            onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+          <div class="feat-icon-fallback">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M13 2 4 14h6l-1 8 9-12h-6l1-8z"/></svg>
+          </div>
+        </div>
+        <div class="feat-card-body">
+          <h4>USB Fast Charging</h4>
+          <p>Charge from a power bank, laptop, or wall adapter.</p>
+        </div>
       </div>
       <div class="feat-card" data-reveal>
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="8" width="16" height="8" rx="2"/><path d="M19 10v4"/></svg>
-        <h4>Rechargeable Battery</h4>
-        <p>Charge ahead of time and groom even when there's no light.</p>
+        <div class="feat-card-photo">
+          <img src="assets/feature-battery.jpg" alt="MSQM tool showing a full battery display" width="500" height="500" loading="lazy"
+            onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+          <div class="feat-icon-fallback">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="8" width="16" height="8" rx="2"/><path d="M19 10v4"/></svg>
+          </div>
+        </div>
+        <div class="feat-card-body">
+          <h4>Rechargeable Battery</h4>
+          <p>Charge ahead of time and groom even when there's no light.</p>
+        </div>
       </div>
       <div class="feat-card" data-reveal>
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="4" y="5" width="16" height="14" rx="2"/><path d="M8 9h8M8 13h5"/></svg>
-        <h4>LED Digital Display</h4>
-        <p>See your battery level and settings at a glance.</p>
+        <div class="feat-card-photo">
+          <img src="assets/feature-led-display.jpg" alt="Close-up of the MSQM LED digital display" width="500" height="500" loading="lazy"
+            onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+          <div class="feat-icon-fallback">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="4" y="5" width="16" height="14" rx="2"/><path d="M8 9h8M8 13h5"/></svg>
+          </div>
+        </div>
+        <div class="feat-card-body">
+          <h4>LED Digital Display</h4>
+          <p>See your battery level and settings at a glance.</p>
+        </div>
       </div>
       <div class="feat-card" data-reveal>
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="4" y="6" width="16" height="13" rx="2"/><path d="M9 6V4h6v2"/></svg>
-        <h4>Premium Travel Case</h4>
-        <p>Pack the full set for home, the barber, or a trip.</p>
+        <div class="feat-card-photo">
+          <img src="assets/feature-travel-case.jpg" alt="The MSQM premium travel case" width="500" height="500" loading="lazy"
+            onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+          <div class="feat-icon-fallback">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="4" y="6" width="16" height="13" rx="2"/><path d="M9 6V4h6v2"/></svg>
+          </div>
+        </div>
+        <div class="feat-card-body">
+          <h4>Premium Travel Case</h4>
+          <p>Pack the full set for home, the barber, or a trip.</p>
+        </div>
       </div>
+    </div>
+  </div>
+</section>
+
+<section class="unbox">
+  <div class="wrap unbox-grid">
+    <div class="unbox-photo" data-reveal>
+      <img src="assets/complete-set-case.jpg" alt="The complete MSQM set neatly packed in its travel case" width="625" height="853" loading="lazy">
+    </div>
+    <div class="unbox-content" data-reveal>
+      <div class="section-head">
+        <h2>Everything arrives in one case</h2>
+        <p>Every tool, cable, and comb comes neatly arranged in the included travel case, ready to close up and go.</p>
+      </div>
+      <ul class="unbox-list">
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12l4 4 10-10"/></svg> All four tools packed together, nothing sold separately</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12l4 4 10-10"/></svg> USB charging cables and guide combs included</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12l4 4 10-10"/></svg> Zips shut for travel, home, or handing to your barber</li>
+      </ul>
     </div>
   </div>
 </section>
@@ -709,7 +818,11 @@
 </section>
 
 <section class="order" id="order">
-  <div class="wrap order-grid">
+  <div class="wrap">
+    <div class="important-notice" data-reveal>
+      <strong>Important Notice:</strong> Please ensure you are fully ready to receive your order within 24 hours before submitting your request. Make sure your phone line is switched on and reachable for delivery calls and SMS/WhatsApp confirmation. If you are not available to receive your package right now, kindly bookmark this link or save our contact details and place your order when you are ready. We only process orders for customers available for immediate delivery. Thank you!
+    </div>
+    <div class="order-grid">
     <div class="order-info" data-reveal>
       <h2>Place your order</h2>
       <p>Fill the form and we will reach out on WhatsApp to confirm your order and delivery address.</p>
@@ -767,13 +880,14 @@
       <button type="submit" class="btn btn-primary">Place Your Order</button>
       <p class="form-note">Next, you'll see a button to confirm your order.</p>
     </form>
+    </div>
   </div>
 </section>
 
 <section class="guarantee">
   <div class="wrap g-grid">
     <div class="g-photo" data-reveal>
-      <img src="assets/guarantee-check.jpg" alt="Man testing the MSQM nose and ear trimmer" width="700" height="700" loading="lazy"
+      <img src="assets/guarantee-badge.jpg" alt="MSQM money-back guarantee seal" width="700" height="700" loading="lazy"
         onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
       <div style="display:none; width:100%; height:100%; align-items:center; justify-content:center; background:linear-gradient(155deg, var(--surface), var(--alt));">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" style="width:44px;height:44px;color:var(--primary);"><path d="M12 3l7 3v6c0 4.5-3 7.5-7 9-4-1.5-7-4.5-7-9V6l7-3z"/><path d="M9 12l2 2 4-4"/></svg>
